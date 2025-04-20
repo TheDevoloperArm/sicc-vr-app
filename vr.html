@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SICC VR</title>
+    <meta name="description" content="Virtual Museum Tour" />
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@5.x.x/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.jss"></script>
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+      <!-- กล้อง + Cursor -->
+      <a-camera id="cam" position="0 1.6 0" wasd-controls-enabled="false">
+        <!-- <a-cursor></a-cursor> -->
+
+        <!-- ปุ่มเมนู -->
+        <a-entity id="ui-menu" position="0 -0.8 -2">
+          <a-entity
+            id="prevRoomBtn"
+            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseleave="scale: 1 1 1"
+            position="-0.5 -0.7 0"
+            class="clickable"
+          >
+            <a-plane
+              width="0.4"
+              height="0.2"
+              material="color: #2196F3; opacity: 0.9"
+            >
+            </a-plane>
+            <a-entity
+              troika-text="value: ⬅️ก่อนหน้า; fontSize: 0.08; color: white"
+            >
+            </a-entity>
+          </a-entity>
+
+          <a-entity
+            id="nextRoomBtn"
+            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseleave="scale: 1 1 1"
+            position="0.5 -0.7 0"
+            class="clickable"
+          >
+            <a-plane
+              width="0.4"
+              height="0.2"
+              material="color: #2196F3; opacity: 0.9"
+            >
+            </a-plane>
+            <a-entity
+              troika-text="value: ➡️ถัดไป; fontSize: 0.08; color: white"
+            >
+            </a-entity>
+          </a-entity>
+
+          <a-entity
+            id="exitBtn"
+            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseleave="scale: 1 1 1"
+            position="1 -0.7 0"
+            class="clickable"
+          >
+            <a-plane
+              width="0.4"
+              height="0.2"
+              material="color: #F44336; opacity: 0.9"
+            >
+            </a-plane>
+            <a-entity troika-text="value: ❌ออก; fontSize: 0.09; color: white">
+            </a-entity>
+          </a-entity>
+
+          <a-entity
+            id="homeRoomBtn"
+            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseleave="scale: 1 1 1"
+            position="0 -0.7 0"
+            class="clickable"
+          >
+            <a-plane
+              width="0.4"
+              height="0.2"
+              material="color: #4CAF50; opacity: 0.9"
+            >
+            </a-plane>
+            <a-entity troika-text="value: 🏠Home; fontSize: 0.09; color: white">
+            </a-entity>
+          </a-entity>
+
+          <a-entity id="roomLabel" position="0 4.8 -3"></a-entity>
+
+          <a-entity
+            id="loading"
+            position="0 1 -2"
+            troika-text="value: กำลังโหลด...; align: center; color: white;"
+          ></a-entity>
+        </a-entity>
+      </a-camera>
+
+      <!-- พื้นหลังภาพ 360 -->
+      <a-sky id="sky" rotation="0 0 0" crossorigin="anonymous"></a-sky>
+    </a-scene>
+
+    <!-- Script -->
+    <script>
+      const nextBtn = document.getElementById("nextRoomBtn");
+      const prevBtn = document.getElementById("prevRoomBtn");
+      const homeBtn = document.getElementById("homeRoomBtn");
+      const exitBtn = document.getElementById("exitBtn");
+
+      let isLoading = false;
+      let rooms = [];
+      let currentRoom = 1;
+      let totalRooms;
+
+      nextBtn.addEventListener("click", () => {
+        const nextRoom = currentRoom + 1 > totalRooms ? 1 : currentRoom + 1;
+        loadRoom(nextRoom);
+      });
+
+      prevBtn.addEventListener("click", () => {
+        const prevRoom = currentRoom - 1 < 1 ? totalRooms : currentRoom - 1;
+        loadRoom(prevRoom);
+      });
+
+      homeBtn.addEventListener("click", () => {
+        loadRoom(1);
+      });
+
+      exitBtn.addEventListener("click", () => {
+        if (isLoading) return;
+        window.location.href = "index.html";
+      });
+
+      fetch("rooms.json")
+        .then((res) => res.json())
+        .then((data) => {
+          rooms = data;
+          loadRoom(currentRoom);
+          totalRooms = data.length;
+          console.log("จำนวนห้องทั้งหมด: ", totalRooms);
+        });
+
+      function loadRoom(roomId) {
+        if (isLoading) return;
+
+        const sky = document.querySelector("#sky");
+        const cam = document.querySelector("#cam");
+        const loading = document.querySelector("#loading");
+        const label = document.querySelector("#roomLabel");
+
+        isLoading = true;
+        loading.setAttribute("visible", true);
+
+        const room = rooms.find((r) => r.id === roomId);
+        currentRoom = roomId;
+
+        if (!room) {
+          alert("ไม่พบห้องนี้");
+          return;
+        }
+
+        cam.removeAttribute("look-controls");
+
+        sky.setAttribute("src", room.image);
+
+        sky.addEventListener("materialtextureloaded", () => {
+          cam.setAttribute("look-controls", "");
+          loading.setAttribute("visible", false);
+          isLoading = false;
+          label.setAttribute(
+            "troika-text",
+            `value: ${room.name}; color: white;`
+          );
+
+          sky.setAttribute("rotation", `0 ${room.y} 0`);
+
+          cam.components["look-controls"].pitchObject.rotation.x = 0;
+          cam.components["look-controls"].yawObject.rotation.y = 0;
+        });
+      }
+    </script>
+  </body>
+</html>
