@@ -141,7 +141,7 @@
         window.location.href = "index.html";
       });
 
-      fetch("../rooms.json")
+      fetch("rooms.json")
         .then((res) => res.json())
         .then((data) => {
           rooms = data;
