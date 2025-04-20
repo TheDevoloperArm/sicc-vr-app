@@ -133,6 +133,7 @@
       });
 
       homeBtn.addEventListener("click", () => {
+        if (currentRoom === 1) return;
         loadRoom(1);
       });
 
