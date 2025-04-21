@@ -115,13 +115,13 @@
     "id": 17,
     "name": "B",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B_chl1na?_a=BAMAJaa40",
-    "y": 95,
+    "y": 0,
     "description": ""
   },
   {
     "id": 18,
     "name": "กำลังดำเนินการ......",
-    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B_chl1na?_a=BAMAJaa40",
+    "image": "https://online.pubhtml5.com/yjrf/tuyj/files/large/1.jpg?1657718153",
     "y": 95,
     "description": ""
   },
@@ -198,7 +198,7 @@
   {
     "id": 29,
     "name": "G",
-    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/E_kyfbvy?_a=BAMAJaa40",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G_bkfcyt?_a=BAMAJaa40",
     "y": 0,
     "description": ""
   },
