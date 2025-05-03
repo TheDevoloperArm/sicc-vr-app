@@ -23,21 +23,16 @@
         <!-- <a-cursor></a-cursor> -->
 
         <!-- ป้ายชื่อของพิพิทธภัณฑ์ -->
-        <a-entity
-          id="title-brand"
-          position="-1.4 1.55 -2"
-          scale="1 1 1"
-          look-at="[camera]"
-        >
+        <a-entity id="title-brand" position="-1.4 0.8 -2">
           <a-plane
-            width="1.0"
-            height="0.2"
-            material="color: #03A791; opacity: 0.8"
-          ></a-plane>
+              width="0.5"
+              height="0.2"
+              material="color: #03A791; opacity: 0.8"
+            ></a-plane>
         </a-entity>
 
         <!-- ปุ่มเมนู -->
-        <a-entity id="ui-menu" position="0 -0.8 -2" scale="1 1 1" look-at="[camera]">
+        <a-entity id="ui-menu" position="0 -0.8 -2">
           <a-entity
             id="prevRoomBtn"
             event-set__mouseenter="scale: 1.2 1.2 1"
@@ -147,7 +142,6 @@
       });
 
       homeBtn.addEventListener("click", () => {
-        if (currentRoom === 1) return;
         loadRoom(1);
       });
 
