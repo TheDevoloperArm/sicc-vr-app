@@ -22,22 +22,137 @@
       <a-camera id="cam" position="0 1.6 0" wasd-controls-enabled="false">
         <!-- <a-cursor></a-cursor> -->
 
-        <!-- ป้ายชื่อของพิพิทธภัณฑ์ -->
-        <a-entity
-          id="title-brand"
-          position="-1.4 1.55 -2"
-          scale="1 1 1"
-          look-at="[camera]"
-        >
-          <a-plane
-            width="1.0"
-            height="0.2"
-            material="color: #03A791; opacity: 0.8"
-          ></a-plane>
+        <a-entity id="ui">
+          <!-- ป้ายชื่อของพิพิทธภัณฑ์ -->
+          <a-entity id="title-brand">
+            <a-plane
+              width="1.7"
+              height="0.3"
+              material="color: #03A791; opacity: 0.8"
+            ></a-plane>
+            <a-entity
+              troika-text="value: พิพิธภัณฑ์เสมือนจริง; fontSize: 0.09; color: white"
+              position="0 0.06 0"
+            ></a-entity>
+            <a-entity
+              troika-text="value: ศูนย์วัฒนธรรมอีสานใต้ จังหวัดบุรีรัมย์; fontSize: 0.09; color: white"
+              position="0 -0.06 0"
+            ></a-entity>
+          </a-entity>
         </a-entity>
 
         <!-- ปุ่มเมนู -->
-        <a-entity id="ui-menu" position="0 -0.8 -2" scale="1 1 1" look-at="[camera]">
+        <a-entity
+          id="ui-menu"
+          position="0 -0.8 -2"
+          scale="1 1 1"
+          look-at="[camera]"
+        >
+          <a-entity
+            id="prevRoomBtn"
+            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseleave="scale: 1 1 1"
+            position="-0.5 -0.7 0"
+            class="clickable"
+          >
+            <a-plane
+              id="prevPlane"
+              width="0.4"
+              height="0.2"
+              material="color: #2196F3; opacity: 0.9"
+            >
+            </a-plane>
+            <a-entity
+              id="prevText"
+              troika-text="value: ⬅️ก่อนหน้า; fontSize: 0.08; color: white"
+            >
+            </a-entity>
+          </a-entity>
+
+          <a-entity
+            id="nextRoomBtn"
+            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseleave="scale: 1 1 1"
+            position="0.5 -0.7 0"
+            class="clickable"
+          >
+            <a-plane
+              id="nextPlane"
+              width="0.4"
+              height="0.2"
+              material="color: #2196F3; opacity: 0.9"
+            >
+            </a-plane>
+            <a-entity
+              id="nextText"
+              troika-text="value: ➡️ถัดไป; fontSize: 0.08; color: white"
+            >
+            </a-entity>
+          </a-entity>
+
+          <a-entity
+            id="exitBtn"
+            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseleave="scale: 1 1 1"
+            position="1 -0.7 0"
+            class="clickable"
+          >
+            <a-plane
+              id="exitPlane"
+              width="0.4"
+              height="0.2"
+              material="color: #F44336; opacity: 0.9"
+            >
+            </a-plane>
+            <a-entity
+              id="exitText"
+              troika-text="value: ❌ออก; fontSize: 0.09; color: white"
+            >
+            </a-entity>
+          </a-entity>
+
+          <a-entity
+            id="homeRoomBtn"
+            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseleave="scale: 1 1 1"
+            position="0 -0.7 0"
+            class="clickable"
+          >
+            <a-plane
+              id="homePlane"
+              width="0.4"
+              height="0.2"
+              material="color: #4CAF50; opacity: 0.9"
+            >
+            </a-plane>
+            <a-entity
+              id="homeText"
+              troika-text="value: 🏠Home; fontSize: 0.09; color: white"
+            >
+            </a-entity>
+          </a-entity>
+
+          <a-entity id="roomLabel" position="0 4.8 -3"></a-entity>
+
+          <a-entity
+            id="loading"
+            position="0 1 -2"
+            troika-text="value: กำลังโหลด...; align: center; color: white;"
+          ></a-entity>
+        </a-entity>
+      </a-camera>
+
+      <!-- พื้นหลังภาพ 360 -->
+      <a-sky id="sky" rotation="0 0 0" crossorigin="anonymous"></a-sky>
+    </a-scene>
+
+    <!-- สำรอง menu -->
+    <!-- <a-entity
+          id="ui-menu"
+          position="0 -0.8 -2"
+          scale="1 1 1"
+          look-at="[camera]"
+        >
           <a-entity
             id="prevRoomBtn"
             event-set__mouseenter="scale: 1.2 1.2 1"
@@ -51,7 +166,7 @@
               material="color: #2196F3; opacity: 0.9"
             >
             </a-plane>
-            <a-entity
+            <a-entity id="prevText"
               troika-text="value: ⬅️ก่อนหน้า; fontSize: 0.08; color: white"
             >
             </a-entity>
@@ -117,12 +232,7 @@
             position="0 1 -2"
             troika-text="value: กำลังโหลด...; align: center; color: white;"
           ></a-entity>
-        </a-entity>
-      </a-camera>
-
-      <!-- พื้นหลังภาพ 360 -->
-      <a-sky id="sky" rotation="0 0 0" crossorigin="anonymous"></a-sky>
-    </a-scene>
+        </a-entity> -->
 
     <!-- Script -->
     <script>
@@ -202,6 +312,90 @@
           cam.components["look-controls"].pitchObject.rotation.x = 0;
           cam.components["look-controls"].yawObject.rotation.y = 0;
         });
+      }
+
+      window.addEventListener("load", adjustUI);
+      window.addEventListener("resize", adjustUI);
+
+      function adjustUI() {
+        // console.log(window.innerWidth);
+        const ui = document.querySelector("#ui");
+        const banner = document.querySelector("#title-brand");
+        const prevBt = document.querySelector("#prevRoomBtn");
+        const nextBt = document.querySelector("#nextRoomBtn");
+        const homeBt = document.querySelector("#homeRoomBtn");
+        const exitBt = document.querySelector("#exitBtn");
+
+        const prevPl = document.querySelector("#prevPlane");
+        const nextPl = document.querySelector("#nextPlane");
+        const homePl = document.querySelector("#homePlane");
+        const exitPl = document.querySelector("#exitPlane");
+
+        const prevText = document.querySelector("#prevText");
+        const nextText = document.querySelector("#nextText");
+        const homeText = document.querySelector("#homeText");
+        const exitText = document.querySelector("#exitText");
+
+        if (window.innerWidth < 600) {
+          // หน้าจอแนวตั้ง
+          banner.setAttribute("position", "0 1.5 -2");
+          banner.setAttribute("scale", "0.85 0.85 1");
+
+          prevBt.setAttribute("position", "-0.25 -0.7 0");
+          prevPl.setAttribute("width", "0.2");
+          prevPl.setAttribute("height", "0.2");
+          prevText.setAttribute("troika-text", "value: ⬅️; fontSize: 0.18;");
+
+          homeBt.setAttribute("position", "0 -0.7 0");
+          homePl.setAttribute("width", "0.2");
+          homePl.setAttribute("height", "0.2");
+          homeText.setAttribute("troika-text", "value: 🏠; fontSize: 0.18;");
+
+          nextBt.setAttribute("position", "0.25 -0.7 0");
+          nextPl.setAttribute("width", "0.2");
+          nextPl.setAttribute("height", "0.2");
+          nextText.setAttribute("troika-text", "value: ➡️; fontSize: 0.18;");
+
+          exitBt.setAttribute("position", "0.5 -0.7 0");
+          exitPl.setAttribute("width", "0.2");
+          exitPl.setAttribute("height", "0.2");
+          exitText.setAttribute("troika-text", "value: ❌; fontSize: 0.18;");
+        } else if (window.innerWidth < 1080) {
+          banner.setAttribute("position", "-2.3 1.4 -2");
+          banner.setAttribute("scale", "1.6 1.6 1");
+
+          prevBt.setAttribute("position", "-0.5 -0.7 0");
+          prevPl.setAttribute("width", "0.4");
+          prevPl.setAttribute("height", "0.2");
+          prevText.setAttribute(
+            "troika-text",
+            "value: ⬅️ก่อนหน้า; fontSize: 0.08;"
+          );
+
+          homeBt.setAttribute("position", "0 -0.7 0");
+          homePl.setAttribute("width", "0.4");
+          homePl.setAttribute("height", "0.2");
+          homeText.setAttribute(
+            "troika-text",
+            "value: 🏠Home; fontSize: 0.09;"
+          );
+
+          nextBt.setAttribute("position", "0.5 -0.7 0");
+          nextPl.setAttribute("width", "0.4");
+          nextPl.setAttribute("height", "0.2");
+          nextText.setAttribute(
+            "troika-text",
+            "value: ➡️ถัดไป; fontSize: 0.09;"
+          );
+
+          exitBt.setAttribute("position", "1 -0.7 0");
+          exitPl.setAttribute("width", "0.4");
+          exitPl.setAttribute("height", "0.2");
+          exitText.setAttribute("troika-text", "value: ❌ออก; fontSize: 0.09;");
+        } else {
+          banner.setAttribute("position", "-2.6 1.5 -2");
+          banner.setAttribute("scale", "1 1 1");
+        }
       }
     </script>
   </body>
