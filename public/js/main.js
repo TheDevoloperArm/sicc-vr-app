@@ -3,72 +3,120 @@ window.addEventListener("resize", adjustUI);
 
 function adjustUI() {
   // console.log(window.innerWidth);
-  const ui = document.querySelector("#ui");
-  const banner = document.querySelector("#title-brand");
+  const ui = document.querySelector("#ui-menu"); // เปลี่ยนจาก #ui เป็น #ui-menu ตาม vr.html
+  // const banner = document.querySelector("#title-brand"); // ไม่มีใน vr.html ที่ให้มา
   const prevBt = document.querySelector("#prevRoomBtn");
   const nextBt = document.querySelector("#nextRoomBtn");
   const homeBt = document.querySelector("#homeRoomBtn");
   const exitBt = document.querySelector("#exitBtn");
 
-  const prevPl = document.querySelector("#prevPlane");
-  const nextPl = document.querySelector("#nextPlane");
-  const homePl = document.querySelector("#homePlane");
-  const exitPl = document.querySelector("#exitPlane");
+  // ไม่จำเป็นต้องอ้างอิงถึง plane และ text element โดยตรงแล้ว
+  // const prevPl = document.querySelector("#prevPlane");
+  // const nextPl = document.querySelector("#nextPlane");
+  // const homePl = document.querySelector("#homePlane");
+  // const exitPl = document.querySelector("#exitPlane");
 
-  const prevText = document.querySelector("#prevText");
-  const nextText = document.querySelector("#nextText");
-  const homeText = document.querySelector("#homeText");
-  const exitText = document.querySelector("#exitText");
+  // const prevText = document.querySelector("#prevText");
+  // const nextText = document.querySelector("#nextText");
+  // const homeText = document.querySelector("##homeText");
+  // const exitText = document.querySelector("#exitText");
 
-  if (window.innerWidth < 600) {
-    // หน้าจอแนวตั้ง
-    banner.setAttribute("position", "0 1.5 -2");
-    banner.setAttribute("scale", "0.85 0.85 1");
+  // อ้างอิงถึง a-image ภายในแต่ละปุ่ม
+  const prevImage = prevBt ? prevBt.querySelector('a-image') : null;
+  const nextImage = nextBt ? nextBt.querySelector('a-image') : null;
+  const homeImage = homeBt ? homeBt.querySelector('a-image') : null;
+  const exitImage = exitBt ? exitBt.querySelector('a-image') : null;
 
-    prevBt.setAttribute("position", "-0.25 -0.7 0");
-    prevPl.setAttribute("width", "0.2");
-    prevPl.setAttribute("height", "0.2");
-    prevText.setAttribute("troika-text", "value: ⬅️; fontSize: 0.18;");
 
-    homeBt.setAttribute("position", "0 -0.7 0");
-    homePl.setAttribute("width", "0.2");
-    homePl.setAttribute("height", "0.2");
-    homeText.setAttribute("troika-text", "value: 🏠; fontSize: 0.18;");
+  // ถ้าคุณต้องการปรับขนาดของ UI-menu ทั้งหมด
+  if (ui) {
+    if (window.innerWidth < 600) {
+      // หน้าจอแนวตั้ง
+      // ui.setAttribute("position", "0 -0.8 -2"); // ตำแหน่งหลักของ ui-menu ควรกำหนดใน vr.html
+      // ui.setAttribute("scale", "0.85 0.85 1"); // ปรับ scale ของ ui-menu ทั้งหมด
+      
+      // ปรับตำแหน่งปุ่มย่อยและขนาดของ a-image
+      if (prevBt) prevBt.setAttribute("position", "-0.35 -0.7 0"); // ปรับตำแหน่งตามความเหมาะสม
+      if (prevImage) {
+        prevImage.setAttribute("width", "0.3");
+        prevImage.setAttribute("height", "0.15"); // ปรับสัดส่วนให้เหมาะสมกับ icon
+      }
 
-    nextBt.setAttribute("position", "0.25 -0.7 0");
-    nextPl.setAttribute("width", "0.2");
-    nextPl.setAttribute("height", "0.2");
-    nextText.setAttribute("troika-text", "value: ➡️; fontSize: 0.18;");
+      if (homeBt) homeBt.setAttribute("position", "0 -0.7 0");
+      if (homeImage) {
+        homeImage.setAttribute("width", "0.3");
+        homeImage.setAttribute("height", "0.15");
+      }
 
-    exitBt.setAttribute("position", "-0.5 -0.7 0");
-    exitPl.setAttribute("width", "0.2");
-    exitPl.setAttribute("height", "0.2");
-    exitText.setAttribute("troika-text", "value: ❌; fontSize: 0.18;");
-  } else if (window.innerWidth < 1024) {
-    banner.setAttribute("position", "-2.3 1.4 -2");
-    banner.setAttribute("scale", "1.6 1.6 1");
+      if (nextBt) nextBt.setAttribute("position", "0.35 -0.7 0");
+      if (nextImage) {
+        nextImage.setAttribute("width", "0.3");
+        nextImage.setAttribute("height", "0.15");
+      }
 
-    prevBt.setAttribute("position", "-0.5 -0.7 0");
-    prevPl.setAttribute("width", "0.4");
-    prevPl.setAttribute("height", "0.2");
-    prevText.setAttribute("troika-text", "value: ⬅️ก่อนหน้า; fontSize: 0.08;");
+      if (exitBt) exitBt.setAttribute("position", "0.7 -0.7 0"); // ปรับตำแหน่งให้ขยับมาทางขวาเพื่อมีที่ว่าง
+      if (exitImage) {
+        exitImage.setAttribute("width", "0.3");
+        exitImage.setAttribute("height", "0.15");
+      }
 
-    homeBt.setAttribute("position", "0 -0.7 0");
-    homePl.setAttribute("width", "0.4");
-    homePl.setAttribute("height", "0.2");
-    homeText.setAttribute("troika-text", "value: 🏠Home; fontSize: 0.09;");
+    } else if (window.innerWidth < 1024) {
+      // แท็บเล็ตและหน้าจอขนาดกลาง
+      // ui.setAttribute("position", "0 -0.8 -2");
+      // ui.setAttribute("scale", "1 1 1"); // คืนค่า scale เดิม
 
-    nextBt.setAttribute("position", "0.5 -0.7 0");
-    nextPl.setAttribute("width", "0.4");
-    nextPl.setAttribute("height", "0.2");
-    nextText.setAttribute("troika-text", "value: ➡️ถัดไป; fontSize: 0.09;");
+      if (prevBt) prevBt.setAttribute("position", "-0.5 -0.7 0");
+      if (prevImage) {
+        prevImage.setAttribute("width", "0.4");
+        prevImage.setAttribute("height", "0.2");
+      }
 
-    exitBt.setAttribute("position", "1 -0.7 0");
-    exitPl.setAttribute("width", "0.4");
-    exitPl.setAttribute("height", "0.2");
-    exitText.setAttribute("troika-text", "value: ❌ออก; fontSize: 0.09;");
-  } else {
-    banner.setAttribute("position", "-2.5 1.5 -2");
-    banner.setAttribute("scale", "1 1 1");
+      if (homeBt) homeBt.setAttribute("position", "0 -0.7 0");
+      if (homeImage) {
+        homeImage.setAttribute("width", "0.4");
+        homeImage.setAttribute("height", "0.2");
+      }
+
+      if (nextBt) nextBt.setAttribute("position", "0.5 -0.7 0");
+      if (nextImage) {
+        nextImage.setAttribute("width", "0.4");
+        nextImage.setAttribute("height", "0.2");
+      }
+
+      if (exitBt) exitBt.setAttribute("position", "1 -0.7 0");
+      if (exitImage) {
+        exitImage.setAttribute("width", "0.4");
+        exitImage.setAttribute("height", "0.2");
+      }
+
+    } else {
+      // หน้าจอ PC
+      // ui.setAttribute("position", "0 -0.8 -2");
+      // ui.setAttribute("scale", "1 1 1");
+
+      if (prevBt) prevBt.setAttribute("position", "-0.5 -0.7 0");
+      if (prevImage) {
+        prevImage.setAttribute("width", "0.4");
+        prevImage.setAttribute("height", "0.2");
+      }
+
+      if (homeBt) homeBt.setAttribute("position", "0 -0.7 0");
+      if (homeImage) {
+        homeImage.setAttribute("width", "0.4");
+        homeImage.setAttribute("height", "0.2");
+      }
+
+      if (nextBt) nextBt.setAttribute("position", "0.5 -0.7 0");
+      if (nextImage) {
+        nextImage.setAttribute("width", "0.4");
+        nextImage.setAttribute("height", "0.2");
+      }
+
+      if (exitBt) exitBt.setAttribute("position", "1 -0.7 0");
+      if (exitImage) {
+        exitImage.setAttribute("width", "0.4");
+        exitImage.setAttribute("height", "0.2");
+      }
+    }
   }
 }
