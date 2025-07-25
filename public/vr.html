@@ -17,41 +17,68 @@
     <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/hotspot.js"></script>
+    <script src="./js/animation-component.js"></script>
   </head>
   <body>
     <a-scene cursor="rayOrigin: mouse">
-      <!-- พื้นหลังภาพ 360 -->
       <a-sky id="sky" rotation="0 0 0" crossorigin="anonymous"></a-sky>
 
       <a-assets>
         <img id="pinIcon" src="./assets/icon/locate.png" />
-        <!-- หรือ emoji, svg ก็ได้ -->
+        <img id="prevAnimFrame1" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449847/1_djotyh.png" />
+        <img id="prevAnimFrame2" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449848/2_p9xf3t.png" />
+        <img id="prevAnimFrame3" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449506/3_hzuoc0.png" />
+        <img id="prevAnimFrame4" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449514/4_l7abd1.png" />
+        <img id="prevAnimFrame5" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449519/5_pcqozc.png" />
+        <img id="prevAnimFrame6" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449529/6_jrczeb.png" />
+        <img id="prevAnimFrame7" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449536/7_cld2fn.png" />
+        <img id="prevAnimFrame8" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449551/8_o3uolx.png" />
+        <img id="prevAnimFrame9" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449562/9_qvffbu.png" />
+        <img id="prevAnimFrame10" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449571/10_x7dn22.png" />
+        <img id="prevAnimFrame11" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449579/11_slx4tb.png" />
+        <img id="prevAnimFrame12" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449586/12_qr7zpn.png" />
+        
+        <img id="nextAnimFrame1" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449847/1_djotyh.png" />
+        <img id="nextAnimFrame2" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449848/2_p9xf3t.png" />
+        <img id="nextAnimFrame3" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449850/3_icsthh.png" />
+        <img id="nextAnimFrame4" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449849/4_k1xub5.png" />
+        <img id="nextAnimFrame5" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449851/5_hqar8g.png" />
+        <img id="nextAnimFrame6" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449903/6_ulaeat.png" />
+        <img id="nextAnimFrame7" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753451174/7_mqjpr6.png" />
+        <img id="nextAnimFrame8" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753451178/8_pujw0a.png" />
+        <img id="nextAnimFrame9" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753451183/9_e6utlu.png" />
+        <img id="nextAnimFrame10" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449937/10_hxxav7.png" />
+        <img id="nextAnimFrame11" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449938/11_e2fqtv.png" />
+        <img id="nextAnimFrame12" src="https://res.cloudinary.com/dzczqfs82/image/upload/v1753449936/12_ndfyao.png" />
+
+        <img id="homeAnimFrame1" src="" />
+        <img id="homeAnimFrame2" src="" />
+        <img id="homeAnimFrame3" src="" />
+        <img id="homeAnimFrame4" src="" />
+        <img id="homeAnimFrame5" src="" />
+        <img id="homeAnimFrame6" src="" />
+        <img id="homeAnimFrame7" src="" />
+        <img id="homeAnimFrame8" src="" />
+        <img id="homeAnimFrame9" src="" />
+        <img id="homeAnimFrame10" src="" />
+        <img id="homeAnimFrame11" src="" />
+        <img id="homeAnimFrame12" src="" />
+
+        <img id="exitAnimFrame1" src="" />
+        <img id="exitAnimFrame2" src="" />
+        <img id="exitAnimFrame3" src="" />
+        <img id="exitAnimFrame4" src="" />
+        <img id="exitAnimFrame5" src="" />
+        <img id="exitAnimFrame6" src="" />
+        <img id="exitAnimFrame7" src="" />
+        <img id="exitAnimFrame8" src="" />
+        <img id="exitAnimFrame9" src="" />
+        <img id="exitAnimFrame10" src="" />
+        <img id="exitAnimFrame11" src="" />
+        <img id="exitAnimFrame12" src="" />
       </a-assets>
 
-      <!-- กล้อง + Cursor -->
       <a-camera id="cam" position="0 1.6 0" wasd-controls-enabled="false">
-        <!-- <a-cursor></a-cursor> -->
-
-        <a-entity id="ui">
-          <!-- ป้ายชื่อของพิพิทธภัณฑ์ -->
-          <a-entity id="title-brand">
-            <a-plane
-              width="1.7"
-              height="0.3"
-              material="color: #03A791; opacity: 0.8"
-            ></a-plane>
-            <a-entity
-              troika-text="value: พิพิธภัณฑ์เสมือนจริง; fontSize: 0.09; color: white"
-              position="0 0.06 0"
-            ></a-entity>
-            <a-entity
-              troika-text="value: ศูนย์วัฒนธรรมอีสานใต้ จังหวัดบุรีรัมย์; fontSize: 0.09; color: white"
-              position="0 -0.06 0"
-            ></a-entity>
-          </a-entity>
-        </a-entity>
-
-        <!-- ปุ่มเมนู -->
         <a-entity id="ui-menu" position="0 -0.8 -2" scale="1 1 1">
           <a-entity
             id="prevRoomBtn"
@@ -60,18 +87,16 @@
             position="-0.5 -0.7 0"
             class="clickable"
           >
-            <a-plane
-              id="prevPlane"
+            <a-image
               width="0.4"
               height="0.2"
-              material="color: #2196F3; opacity: 0.9"
-            >
-            </a-plane>
-            <a-entity
-              id="prevText"
-              troika-text="value: ⬅️ก่อนหน้า; fontSize: 0.08; color: white"
-            >
-            </a-entity>
+              frame-animation="
+                frames: #prevAnimFrame1, #prevAnimFrame2, #prevAnimFrame3, #prevAnimFrame4, #prevAnimFrame5, #prevAnimFrame6, #prevAnimFrame7, #prevAnimFrame8, #prevAnimFrame9, #prevAnimFrame10, #prevAnimFrame11, #prevAnimFrame12;
+                frameDuration: 80;
+                autoplay: true;
+                loop: true;
+              "
+            ></a-image>
           </a-entity>
 
           <a-entity
@@ -81,39 +106,16 @@
             position="0.5 -0.7 0"
             class="clickable"
           >
-            <a-plane
-              id="nextPlane"
+            <a-image
               width="0.4"
               height="0.2"
-              material="color: #2196F3; opacity: 0.9"
-            >
-            </a-plane>
-            <a-entity
-              id="nextText"
-              troika-text="value: ➡️ถัดไป; fontSize: 0.08; color: white"
-            >
-            </a-entity>
-          </a-entity>
-
-          <a-entity
-            id="exitBtn"
-            event-set__mouseenter="scale: 1.2 1.2 1"
-            event-set__mouseleave="scale: 1 1 1"
-            position="1 -0.7 0"
-            class="clickable"
-          >
-            <a-plane
-              id="exitPlane"
-              width="0.4"
-              height="0.2"
-              material="color: #F44336; opacity: 0.9"
-            >
-            </a-plane>
-            <a-entity
-              id="exitText"
-              troika-text="value: ❌ออก; fontSize: 0.09; color: white"
-            >
-            </a-entity>
+              frame-animation="
+                frames: #nextAnimFrame1, #nextAnimFrame2, #nextAnimFrame3, #nextAnimFrame4, #nextAnimFrame5, #nextAnimFrame6, #nextAnimFrame7, #nextAnimFrame8, #nextAnimFrame9, #nextAnimFrame10, #nextAnimFrame11, #nextAnimFrame12;
+                frameDuration: 80;
+                autoplay: true;
+                loop: true;
+              "
+            ></a-image>
           </a-entity>
 
           <a-entity
@@ -123,18 +125,35 @@
             position="0 -0.7 0"
             class="clickable"
           >
-            <a-plane
-              id="homePlane"
+            <a-image
               width="0.4"
               height="0.2"
-              material="color: #4CAF50; opacity: 0.9"
-            >
-            </a-plane>
-            <a-entity
-              id="homeText"
-              troika-text="value: 🏠Home; fontSize: 0.09; color: white"
-            >
-            </a-entity>
+              frame-animation="
+                frames: #homeAnimFrame1, #homeAnimFrame2, #homeAnimFrame3, #homeAnimFrame4, #homeAnimFrame5, #homeAnimFrame6, #homeAnimFrame7, #homeAnimFrame8, #homeAnimFrame9, #homeAnimFrame10, #homeAnimFrame11, #homeAnimFrame12;
+                frameDuration: 80;
+                autoplay: true;
+                loop: true;
+              "
+            ></a-image>
+          </a-entity>
+
+          <a-entity
+            id="exitBtn"
+            event-set__mouseenter="scale: 1.2 1.2 1"
+            event-set__mouseleave="scale: 1 1 1"
+            position="1 -0.7 0"
+            class="clickable"
+          >
+            <a-image
+              width="0.4"
+              height="0.2"
+              frame-animation="
+                frames: #exitAnimFrame1, #exitAnimFrame2, #exitAnimFrame3, #exitAnimFrame4, #exitAnimFrame5, #exitAnimFrame6, #exitAnimFrame7, #exitAnimFrame8, #exitAnimFrame9, #exitAnimFrame10, #exitAnimFrame11, #exitAnimFrame12;
+                frameDuration: 80;
+                autoplay: true;
+                loop: true;
+              "
+            ></a-image>
           </a-entity>
 
           <a-entity id="roomLabel" position="0 4.8 -3"></a-entity>
@@ -147,7 +166,6 @@
         </a-entity>
       </a-camera>
 
-      <!-- Hotspot 1 -->
       <a-entity position="2 1.5 -3" class="clickable" pin-toggle>
         <a-image
           src="#pinIcon"
@@ -166,95 +184,6 @@
       </a-entity>
     </a-scene>
 
-    <!-- สำรอง menu -->
-    <!-- <a-entity
-          id="ui-menu"
-          position="0 -0.8 -2"
-          scale="1 1 1"
-          look-at="[camera]"
-        >
-          <a-entity
-            id="prevRoomBtn"
-            event-set__mouseenter="scale: 1.2 1.2 1"
-            event-set__mouseleave="scale: 1 1 1"
-            position="-0.5 -0.7 0"
-            class="clickable"
-          >
-            <a-plane
-              width="0.4"
-              height="0.2"
-              material="color: #2196F3; opacity: 0.9"
-            >
-            </a-plane>
-            <a-entity id="prevText"
-              troika-text="value: ⬅️ก่อนหน้า; fontSize: 0.08; color: white"
-            >
-            </a-entity>
-          </a-entity>
-
-          <a-entity
-            id="nextRoomBtn"
-            event-set__mouseenter="scale: 1.2 1.2 1"
-            event-set__mouseleave="scale: 1 1 1"
-            position="0.5 -0.7 0"
-            class="clickable"
-          >
-            <a-plane
-              width="0.4"
-              height="0.2"
-              material="color: #2196F3; opacity: 0.9"
-            >
-            </a-plane>
-            <a-entity
-              troika-text="value: ➡️ถัดไป; fontSize: 0.08; color: white"
-            >
-            </a-entity>
-          </a-entity>
-
-          <a-entity
-            id="exitBtn"
-            event-set__mouseenter="scale: 1.2 1.2 1"
-            event-set__mouseleave="scale: 1 1 1"
-            position="1 -0.7 0"
-            class="clickable"
-          >
-            <a-plane
-              width="0.4"
-              height="0.2"
-              material="color: #F44336; opacity: 0.9"
-            >
-            </a-plane>
-            <a-entity troika-text="value: ❌ออก; fontSize: 0.09; color: white">
-            </a-entity>
-          </a-entity>
-
-          <a-entity
-            id="homeRoomBtn"
-            event-set__mouseenter="scale: 1.2 1.2 1"
-            event-set__mouseleave="scale: 1 1 1"
-            position="0 -0.7 0"
-            class="clickable"
-          >
-            <a-plane
-              width="0.4"
-              height="0.2"
-              material="color: #4CAF50; opacity: 0.9"
-            >
-            </a-plane>
-            <a-entity troika-text="value: 🏠Home; fontSize: 0.09; color: white">
-            </a-entity>
-          </a-entity>
-
-          <a-entity id="roomLabel" position="0 4.8 -3"></a-entity>
-
-          <a-entity
-            id="loading"
-            position="0 1 -2"
-            troika-text="value: กำลังโหลด...; align: center; color: white;"
-          ></a-entity>
-        </a-entity> -->
-
-    <!-- Script -->
     <script>
       const nextBtn = document.getElementById("nextRoomBtn");
       const prevBtn = document.getElementById("prevRoomBtn");
