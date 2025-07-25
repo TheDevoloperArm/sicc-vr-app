@@ -9,7 +9,7 @@
         "position": "2 1.5 -3",
         "text": "วัตถุ A",
         "linkToRoom": null,
-        "detailImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/01_lho0ii.png",
+        "detailImage": "https://res.cloudinary.com/image/upload/w_1000/q_auto/f_auto/01_lho0ii.png",
         "detailTitle": "วัตถุโบราณชิ้นสำคัญ A"
       },
       {
@@ -30,7 +30,7 @@
         "position": "1 1.2 -2",
         "text": "ข้อมูลวัตถุ B",
         "linkToRoom": null,
-        "detailImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/02_nqkxpf.png",
+        "detailImage": "https://res.cloudinary.com/image/upload/w_1000/q_auto/f_auto/02_nqkxpf.png",
         "detailTitle": "เครื่องปั้นดินเผาอายุ 500 ปี"
       },
       {
@@ -46,359 +46,314 @@
     "name": "06",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/06_ki6xor?_a=BAMAJaa40",
     "y": -100,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 4,
     "name": "6A",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/6A_bhydqo?_a=BAMAJaa40",
     "y": -90,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 5,
     "name": "07",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/07_fgofai?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 6,
     "name": "08",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/08_pxuk1q?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 7,
     "name": "09",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/09_ennhhm?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 8,
     "name": "10",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/10_kxldyl?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 9,
     "name": "11",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/11_jlr6lt?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 10,
     "name": "12",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/12_ujjrkl?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 11,
     "name": "13",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/13_xrg82b?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 12,
     "name": "14",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/14_znl5ey?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 13,
     "name": "15",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/15_q9hlv9?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 14,
     "name": "END",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/END_cd9kgq?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 15,
     "name": "A1",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/A1_jchbdu?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 16,
     "name": "A",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/A_wq03p3?_a=BAMAJaa40",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 17,
     "name": "B",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B_chl1na?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 18,
     "name": "กำลังดำเนินการ......",
     "image": "https://cdn.polyhaven.com/asset_img/primary/mirrored_hall.png?height=760",
     "y": 95,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 19,
     "name": "B3",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B3_d6ws7p?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 20,
     "name": "B4",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B4_hwmfjx?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 21,
     "name": "C",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/C_ryqdt2?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 22,
     "name": "D",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D_mg1v5p?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 23,
     "name": "D5",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D5_yozeen?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 24,
     "name": "D6",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D6_tqupoc?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 25,
     "name": "D8",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D8_tnyusa?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 26,
     "name": "D7",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D7_ur5if9?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 27,
     "name": "F",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/F_udwria?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 28,
     "name": "E",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/E_kyfbvy?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 29,
     "name": "G",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G_bkfcyt?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 30,
     "name": "H",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/H_vg606m?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 31,
     "name": "G1",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G1_lxlc8q?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 32,
     "name": "G2",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G2_mo0gfw?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 33,
     "name": "G3",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G3_mebgjf?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 34,
     "name": "F3",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/F3_il1gfe?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 35,
     "name": "F1",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/F1_x2rqsm?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 36,
     "name": "F2",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/F2_mytce2?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 37,
     "name": "G4",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G4_ldvv4h?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 38,
     "name": "I",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/I_gmj9rb?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 39,
     "name": "J",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J_ul2602?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 40,
     "name": "J1",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J1_eymobi?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 41,
     "name": "J2",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J2_krm7x6?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 42,
     "name": "J3",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J3_yuvy4p?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 43,
     "name": "J4",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J4_elevvq?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 44,
     "name": "J5",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J5_jqy30e?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 45,
     "name": "J6",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J6_h9pm2v?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 46,
     "name": "L",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/L_ojad1c?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   },
   {
     "id": 47,
     "name": "K",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/K_ylbcnz?_a=BAMAJaa40",
     "y": 0,
-    "description": "",
-    "hotspots": []
+    "description": ""
   }
 ]
