@@ -447,83 +447,108 @@
         cam.removeAttribute("look-controls");
 
         sky.setAttribute("src", room.image);
-
-        sky.addEventListener("materialtextureloaded", function handler() {
+        
+        sky.addEventListener("materialtextureloaded", () => {
           cam.setAttribute("look-controls", "");
           loading.setAttribute("visible", false);
           isLoading = false;
+
+          // ตั้งชื่อห้อง
           label.setAttribute(
             "troika-text",
             `value: ${room.name}; color: white;`
           );
-
           sky.setAttribute("rotation", `0 ${room.y} 0`);
 
+          // รีเซ็ตมุมกล้อง
           cam.components["look-controls"].pitchObject.rotation.x = 0;
           cam.components["look-controls"].yawObject.rotation.y = 0;
 
-          // ลบ Hotspot เก่าออกก่อน
-          const oldHotspots = scene.querySelectorAll("[data-hotspot-id]");
-          oldHotspots.forEach((hotspot) =>
-            hotspot.parentNode.removeChild(hotspot)
-          );
-
-          // สร้าง Hotspot ใหม่จากข้อมูลใน rooms.json
-          // เพิ่มการตรวจสอบตรงนี้!
-          if (room.hotspots && Array.isArray(room.hotspots)) {
-            //
-            room.hotspots.forEach((hotspotData, index) => {
-              const hotspotEntity = document.createElement("a-entity");
-              hotspotEntity.setAttribute("position", hotspotData.position);
-              hotspotEntity.setAttribute("class", "clickable");
-              hotspotEntity.setAttribute(
-                "data-hotspot-id",
-                `${roomId}-${index}`
-              );
-              hotspotEntity.setAttribute("pin-toggle", "");
-
-              // ส่งข้อมูล Hotspot ไปยัง component
-              hotspotEntity.setAttribute(
-                "hotspot-data",
-                JSON.stringify(hotspotData)
-              );
-
-              const hotspotImage = document.createElement("a-image");
-              hotspotImage.setAttribute("src", "#pinIcon");
-              hotspotImage.setAttribute("width", "0.3");
-              hotspotImage.setAttribute("height", "0.3");
-              hotspotImage.setAttribute("look-at", "[camera]");
-              hotspotImage.setAttribute(
-                "event-set__mouseenter",
-                "scale: 1.2 1.2 1"
-              );
-              hotspotImage.setAttribute(
-                "event-set__mouseleave",
-                "scale: 1 1 1"
-              );
-              hotspotEntity.appendChild(hotspotImage);
-
-              // เพิ่มข้อความ (ที่ตอนนี้จะถูกซ่อนไว้ หรือใช้เป็น tooltip)
-              const hotspotText = document.createElement("a-entity");
-              hotspotText.setAttribute(
-                "troika-text",
-                `value: ${hotspotData.text}; fontSize: 0.1; color: white`
-              );
-              hotspotText.setAttribute("visible", "false");
-              hotspotText.setAttribute("position", "0 -0.3 0");
-              hotspotEntity.appendChild(hotspotText);
-
-              scene.appendChild(hotspotEntity);
-            });
+          // โหลด Hotspot ของห้องนั้น
+          if (room.hotspots && room.hotspots.length > 0) {
+            createHotspots(room.hotspots);
           } else {
-            console.warn(
-              `Room ${room.id} (${room.name}) does not have a 'hotspots' array or it is not an array.`
-            );
+            // ถ้าไม่มี hotspot ให้ลบ hotspot เดิมออก
+            createHotspots([]);
           }
-
-          // ลบ event listener หลังจากโหลดเสร็จ เพื่อไม่ให้ทำงานซ้ำ
-          sky.removeEventListener("materialtextureloaded", handler);
         });
+
+        // sky.addEventListener("materialtextureloaded", function handler() {
+        //   cam.setAttribute("look-controls", "");
+        //   loading.setAttribute("visible", false);
+        //   isLoading = false;
+        //   label.setAttribute(
+        //     "troika-text",
+        //     `value: ${room.name}; color: white;`
+        //   );
+
+        //   sky.setAttribute("rotation", `0 ${room.y} 0`);
+
+        //   cam.components["look-controls"].pitchObject.rotation.x = 0;
+        //   cam.components["look-controls"].yawObject.rotation.y = 0;
+
+        //   // ลบ Hotspot เก่าออกก่อน
+        //   const oldHotspots = scene.querySelectorAll("[data-hotspot-id]");
+        //   oldHotspots.forEach((hotspot) =>
+        //     hotspot.parentNode.removeChild(hotspot)
+        //   );
+
+        //   // สร้าง Hotspot ใหม่จากข้อมูลใน rooms.json
+        //   // เพิ่มการตรวจสอบตรงนี้!
+        //   if (room.hotspots && Array.isArray(room.hotspots)) {
+        //     //
+        //     room.hotspots.forEach((hotspotData, index) => {
+        //       const hotspotEntity = document.createElement("a-entity");
+        //       hotspotEntity.setAttribute("position", hotspotData.position);
+        //       hotspotEntity.setAttribute("class", "clickable");
+        //       hotspotEntity.setAttribute(
+        //         "data-hotspot-id",
+        //         `${roomId}-${index}`
+        //       );
+        //       hotspotEntity.setAttribute("pin-toggle", "");
+
+        //       // ส่งข้อมูล Hotspot ไปยัง component
+        //       hotspotEntity.setAttribute(
+        //         "hotspot-data",
+        //         JSON.stringify(hotspotData)
+        //       );
+
+        //       const hotspotImage = document.createElement("a-image");
+        //       hotspotImage.setAttribute("src", "#pinIcon");
+        //       hotspotImage.setAttribute("width", "0.3");
+        //       hotspotImage.setAttribute("height", "0.3");
+        //       hotspotImage.setAttribute("look-at", "[camera]");
+        //       hotspotImage.setAttribute(
+        //         "event-set__mouseenter",
+        //         "scale: 1.2 1.2 1"
+        //       );
+        //       hotspotImage.setAttribute(
+        //         "event-set__mouseleave",
+        //         "scale: 1 1 1"
+        //       );
+        //       hotspotEntity.appendChild(hotspotImage);
+
+        //       // เพิ่มข้อความ (ที่ตอนนี้จะถูกซ่อนไว้ หรือใช้เป็น tooltip)
+        //       const hotspotText = document.createElement("a-entity");
+        //       hotspotText.setAttribute(
+        //         "troika-text",
+        //         `value: ${hotspotData.text}; fontSize: 0.1; color: white`
+        //       );
+        //       hotspotText.setAttribute("visible", "false");
+        //       hotspotText.setAttribute("position", "0 -0.3 0");
+        //       hotspotEntity.appendChild(hotspotText);
+
+        //       scene.appendChild(hotspotEntity);
+        //     });
+        //   } else {
+        //     console.warn(
+        //       `Room ${room.id} (${room.name}) does not have a 'hotspots' array or it is not an array.`
+        //     );
+        //   }
+
+        //   // ลบ event listener หลังจากโหลดเสร็จ เพื่อไม่ให้ทำงานซ้ำ
+        //   sky.removeEventListener("materialtextureloaded", handler);
+        // });
       }
     </script>
   </body>
