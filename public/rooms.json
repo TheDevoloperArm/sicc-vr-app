@@ -6,17 +6,17 @@
     "y": -100,
     "hotspots": [
       {
-        "position": { "x": 2, "y": 1.5, "z": -3 },
+        "label": "วัตถุโบราณชิ้นสำคัญ A",
         "text": "วัตถุที่ 1",
         "linkToRoom": null,
-        "icon" : "./assets/icon/locate.png",
-        "detailImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/01_lho0ii.png",
-        "label": "วัตถุโบราณชิ้นสำคัญ A"
+        "icon": "./assets/icon/locate.png",
+        "popupImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/01_lho0ii.png",
+        "position": { "x": 2, "y": 1.5, "z": -3 }
       },
       {
         "position": { "x": -3, "y": 1, "z": 2 },
         "text": "ทางไปห้องจัดแสดงที่ 1",
-        "icon" : "./assets/icon/locate.png",
+        "icon": "./assets/icon/locate.png",
         "linkToRoom": 2,
         "detail": "คลิกที่นี่เพื่อไปยังห้องจัดแสดงที่ 1 ซึ่งรวบรวมวัตถุที่น่าสนใจไว้อีกมากมาย"
       }
@@ -32,8 +32,8 @@
         "position": { "x": 1, "y": 1.2, "z": -2 },
         "text": "ข้อมูลวัตถุ B",
         "linkToRoom": null,
-        "icon" : "./assets/icon/locate.png",
-        "detailImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/02_nqkxpf.png",
+        "icon": "./assets/icon/locate.png",
+        "popupImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/02_nqkxpf.png",
         "label": "เครื่องปั้นดินเผาอายุ 500 ปี"
       },
       {
