@@ -22,7 +22,7 @@
         "position": { "x": -3, "y": 1.5, "z": 2 }
       }
     ],
-    "wayparts": [
+    "waypoints": [
       {
         "position": { "x": -3, "y": 1, "z": 2 },
         "text": "ทางไปห้องจัดแสดงที่ 1",
