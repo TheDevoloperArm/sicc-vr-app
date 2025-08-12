@@ -224,7 +224,12 @@
 
       <a-camera id="cam" position="0 1.6 0" wasd-controls-enabled="false">
         <!-- Popup -->
-        <a-entity id="popupPanel" visible="false" position="0 0 -1.5" class="no-intersect">
+        <a-entity
+          id="popupPanel"
+          visible="false"
+          position="0 0 -1.5"
+          class="no-intersect"
+        >
           <!-- พื้นหลังโปร่ง -->
           <a-plane
             width="1.5"
@@ -365,6 +370,43 @@
           ></a-entity>
         </a-entity>
       </a-camera>
+      <!-- Way Point 1 -->
+      <a-entity
+        class="clickable waypoint"
+        data-target="waypoint1"
+        position="3 1.5 -2"
+      >
+        <a-image
+          src="#arrowIcon"
+          width="0.4"
+          height="0.4"
+          look-at="[camera]"
+          event-set__mouseenter="scale: 1.2 1.2 1"
+          event-set__mouseleave="scale: 1 1 1"
+        ></a-image>
+        <a-entity
+          troika-text="value: ไปจุดที่ 1; fontSize: 0.08; color: yellow"
+          position="0 -0.3 0"
+        ></a-entity>
+      </a-entity>
+
+      <!-- Way Point 2 -->
+      <a-entity
+        class="clickable waypoint"
+        data-target="waypoint2"
+        position="-2 1.5 -3"
+      >
+        <a-image
+          src="#arrowIcon"
+          width="0.4"
+          height="0.4"
+          look-at="[camera]"
+        ></a-image>
+        <a-entity
+          troika-text="value: ไปจุดที่ 2; fontSize: 0.08; color: yellow"
+          position="0 -0.3 0"
+        ></a-entity>
+      </a-entity>
     </a-scene>
 
     <script>
