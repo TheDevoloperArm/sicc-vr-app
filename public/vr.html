@@ -24,6 +24,7 @@
       <a-sky id="sky" rotation="0 0 0" crossorigin="anonymous"></a-sky>
 
       <a-assets>
+        <img id="portIcon" src="./assets/icon/1.PNG" />
         <img id="pinIcon" src="./assets/icon/locate.png" />
         <img
           id="prevAnimFrame1"
@@ -369,44 +370,12 @@
             troika-text="value: กำลังโหลด...; align: center; color: white;"
           ></a-entity>
         </a-entity>
-      </a-camera>
-      <!-- Way Point 1 -->
-      <a-entity
-        class="clickable waypoint"
-        data-target="waypoint1"
-        position="3 1.5 -2"
-      >
-        <a-image
-          src="#arrowIcon"
-          width="0.4"
-          height="0.4"
-          look-at="[camera]"
-          event-set__mouseenter="scale: 1.2 1.2 1"
-          event-set__mouseleave="scale: 1 1 1"
-        ></a-image>
-        <a-entity
-          troika-text="value: ไปจุดที่ 1; fontSize: 0.08; color: yellow"
-          position="0 -0.3 0"
-        ></a-entity>
-      </a-entity>
 
-      <!-- Way Point 2 -->
+      </a-camera>
+      <!-- เรียกใช้งาน waypoint -->
       <a-entity
-        class="clickable waypoint"
-        data-target="waypoint2"
-        position="-2 1.5 -3"
-      >
-        <a-image
-          src="#arrowIcon"
-          width="0.4"
-          height="0.4"
-          look-at="[camera]"
-        ></a-image>
-        <a-entity
-          troika-text="value: ไปจุดที่ 2; fontSize: 0.08; color: yellow"
-          position="0 -0.3 0"
-        ></a-entity>
-      </a-entity>
+        waypoint-manager="roomId: 1; dataUrl: rooms.json; icon: #portIcon"
+      ></a-entity>
     </a-scene>
 
     <script>
@@ -498,6 +467,12 @@
           }
         });
 
+        if (room.waypoints && room.waypoints.length > 0) {
+          createWaypoints(room.waypoints);
+        } else {
+          createWaypoints([]); // ลบของเก่าออก
+        }
+
         // sky.addEventListener("materialtextureloaded", function handler() {
         //   cam.setAttribute("look-controls", "");
         //   loading.setAttribute("visible", false);
@@ -576,5 +551,6 @@
         // });
       }
     </script>
+    <script src="./js/waypoint.js"></script>
   </body>
 </html>
