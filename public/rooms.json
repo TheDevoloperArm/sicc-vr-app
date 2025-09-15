@@ -23,8 +23,9 @@
       }
     ],
     "waypoints": [
-      { "label": "ไปห้อง B", "x": 5, "y": 1.6, "z": -2, "targetRoom": 2 },
-      { "label": "ไปห้อง C", "x": -3, "y": 1.6, "z": 4, "targetRoom": 3 }
+      { "label": "ห้องจัดแสดงที่ 1", "x": -0.4, "y": 1, "z": -2.7, "targetRoom": 2 },
+      { "label": "10", "x": -2.5, "y": 1.1, "z": 0.2, "targetRoom": 8 },
+      { "label": "07", "x": 0.2, "y": 1.1, "z": 2.5, "targetRoom": 5 }
     ]
   },
   {
