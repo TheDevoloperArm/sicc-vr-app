@@ -1,65 +1,126 @@
 [
   {
     "id": 1,
-    "name": "โถงทางเข้า",
-    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/04_ate94u?_a=BAMAJaa40",
-    "y": -100,
+    "name": "1",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/1_sj80fk",
+    "y": -87,
     "hotspots": [
-      {
-        "label": "วัตถุโบราณชิ้นสำคัญ A",
-        "text": "วัตถุที่ 1",
-        "linkToRoom": null,
-        "icon": "./assets/icon/locate.png",
-        "popupImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/01_lho0ii.png",
-        "position": { "x": 1.5, "y": 1.5, "z": -3 }
-      },
-      {
-        "label": "วัตถุโบราณชิ้นสำคัญ B",
-        "text": "วัตถุที่ 2",
-        "linkToRoom": null,
-        "icon": "./assets/icon/locate.png",
-        "popupImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/02_nqkxpf.png",
-        "position": { "x": -3, "y": 1.5, "z": 2 }
-      }
+      
     ],
     "waypoints": [
-      { "label": "ห้องจัดแสดงที่ 1", "x": -0.4, "y": 1, "z": -2.7, "targetRoom": 2 },
-      { "label": "10", "x": -2.5, "y": 1.1, "z": 0.2, "targetRoom": 8 },
-      { "label": "07", "x": 0.2, "y": 1.1, "z": 2.5, "targetRoom": 5 }
+      { "label": "ทางเข้าชม", "x": -0.05, "y": 1.2, "z": -2.7, "targetRoom": 2 }
     ]
   },
   {
     "id": 2,
-    "name": "ห้องจัดแสดงที่ 1",
-    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/05_zogpmu?_a=BAMAJaa40",
+    "name": "1-A",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/1-A_mywsjw?_a=BAMAJaa40",
     "y": -90,
+    "hotspots": [
+    ],
+    "waypoints": [
+      { "label": "ทางเข้า", "x": -0.2, "y": 1.3, "z": -2.7, "targetRoom": 3 },
+      { "label": "ด้านหน้า", "x": 0, "y": 1.1, "z": 2.5, "targetRoom": 1 }
+
+    ]
+  },
+  {
+    "id": 3,
+    "name": "1-B",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/1-B_xorco8?_a=BAMAJaa40",
+    "y": -95,
     "hotspots": [
       {
         "label": "เครื่องปั้นดินเผาอายุ 500 ปี",
         "text": "ข้อมูลวัตถุ B",
         "linkToRoom": null,
         "icon": "./assets/icon/locate.png",
-        "popupImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/02_nqkxpf.png",
+        "popupImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/02_nqkxpf?_a=BAMAJaa40",
         "position": { "x": 1, "y": 1.2, "z": -2 }
-      },
-      {
-        "position": { "x": -2, "y": 1, "z": 1 },
-        "text": "ทางกลับโถงทางเข้า",
-        "linkToRoom": 1,
-        "detail": "กลับไปยังโถงทางเข้าหลักของพิพิธภัณฑ์"
       }
+    ],
+    "waypoints":[
+      { "label": "ทางเข้า", "x": -0.15, "y": 1, "z": -2, "targetRoom": 4 },
+      { "label": "ด้านหน้า", "x": 0, "y": 1.1, "z": 1, "targetRoom": 2 }
     ]
   },
   {
-    "id": 3,
-    "name": "06",
-    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/06_ki6xor?_a=BAMAJaa40",
-    "y": -100,
+    "id": 4,
+    "name": "1-C",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/1-C_x1wujs?_a=BAMAJaa40",
+    "y": 180,
     "description": "",
-    "hotspots": []
+    "hotspots": [],
+    "waypoints":[
+      { "label": "02", "x": -0.15, "y": 1, "z": -2, "targetRoom": 5 },
+      { "label": "1-B", "x": 0, "y": 0.7, "z": 2.7, "targetRoom": 3 }
+    ]
   },
   {
-    "id": 4,
+    "id": 5,
+    "name": "02",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/02_m6hmng?_a=BAMAJaa40",
+    "y": 270,
+    "description": "",
+    "hotspots": [],
+    "waypoints":[
+      { "label": "03", "x": -0.15, "y": 1.2, "z": -3, "targetRoom": 6 },
+      { "label": "END", "x": -2.6, "y": 1, "z": -0.5, "targetRoom": 53 },
+      { "label": "1-C", "x": 0.4, "y": 0.7, "z": 3, "targetRoom": 4 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "03",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/03_tqba9s?_a=BAMAJaa40",
+    "y": 180,
+    "description": "",
+    "hotspots": [],
+    "waypoints":[
+      { "label": "02", "x": 0.2, "y": 1.2, "z": 2.7, "targetRoom": 5 },
+      { "label": "04", "x": 0.6, "y": 1, "z": -4.2, "targetRoom": 7 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "04",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/04_ate94u?_a=BAMAJaa40",
+    "y": 260,
+    "description": "",
+    "hotspots": [],
+    "waypoints":[
+      { "label": "03", "x": 3, "y": 1.2, "z": 0.3, "targetRoom": 6 },
+      { "label": "05", "x": -0.15, "y": 1, "z": -2, "targetRoom": 8 },
+      { "label": "07", "x": 0.2, "y": 1, "z": 3.3, "targetRoom": 11 },
+      { "label": "10", "x": -2.7, "y": 1, "z": 0, "targetRoom": 14 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "05",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/05_zogpmu?_a=BAMAJaa40",
+    "y": 180,
+    "description": "",
+    "hotspots": [],
+    "waypoints":[
+      { "label": "03", "x": -0.15, "y": 1, "z": -2, "targetRoom": 6 },
+      { "label": "10", "x": 0, "y": 0.7, "z": 2.7, "targetRoom": 3 }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "06",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/06_ki6xor?_a=BAMAJaa40",
+    "y": 180,
+    "description": "",
+    "hotspots": [],
+    "waypoints":[
+      { "label": "ทางเข้า", "x": -0.15, "y": 1, "z": -2, "targetRoom": 5 },
+      { "label": "ด้านหน้า", "x": 0, "y": 0.7, "z": 2.7, "targetRoom": 3 }
+    ]
+  },
+  {
+    "id": 10,
     "name": "6A",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/6A_bhydqo?_a=BAMAJaa40",
     "y": -90,
@@ -67,7 +128,7 @@
     "hotspots": []
   },
   {
-    "id": 5,
+    "id": 11,
     "name": "07",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/07_fgofai?_a=BAMAJaa40",
     "y": 95,
@@ -75,7 +136,7 @@
     "hotspots": []
   },
   {
-    "id": 6,
+    "id": 12,
     "name": "08",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/08_pxuk1q?_a=BAMAJaa40",
     "y": 95,
@@ -83,7 +144,7 @@
     "hotspots": []
   },
   {
-    "id": 7,
+    "id": 13,
     "name": "09",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/09_ennhhm?_a=BAMAJaa40",
     "y": 95,
@@ -91,7 +152,7 @@
     "hotspots": []
   },
   {
-    "id": 8,
+    "id": 14,
     "name": "10",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/10_kxldyl?_a=BAMAJaa40",
     "y": 95,
@@ -99,7 +160,7 @@
     "hotspots": []
   },
   {
-    "id": 9,
+    "id": 15,
     "name": "11",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/11_jlr6lt?_a=BAMAJaa40",
     "y": 95,
@@ -107,7 +168,7 @@
     "hotspots": []
   },
   {
-    "id": 10,
+    "id": 16,
     "name": "12",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/12_ujjrkl?_a=BAMAJaa40",
     "y": 95,
@@ -115,7 +176,7 @@
     "hotspots": []
   },
   {
-    "id": 11,
+    "id": 17,
     "name": "13",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/13_xrg82b?_a=BAMAJaa40",
     "y": 95,
@@ -123,7 +184,7 @@
     "hotspots": []
   },
   {
-    "id": 12,
+    "id": 18,
     "name": "14",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/14_znl5ey?_a=BAMAJaa40",
     "y": 95,
@@ -131,7 +192,7 @@
     "hotspots": []
   },
   {
-    "id": 13,
+    "id": 19,
     "name": "15",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/15_q9hlv9?_a=BAMAJaa40",
     "y": 95,
@@ -139,7 +200,7 @@
     "hotspots": []
   },
   {
-    "id": 14,
+    "id": 20,
     "name": "END",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/END_cd9kgq?_a=BAMAJaa40",
     "y": 95,
@@ -147,7 +208,7 @@
     "hotspots": []
   },
   {
-    "id": 15,
+    "id": 21,
     "name": "A1",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/A1_jchbdu?_a=BAMAJaa40",
     "y": 95,
@@ -155,7 +216,7 @@
     "hotspots": []
   },
   {
-    "id": 16,
+    "id": 22,
     "name": "A",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/A_wq03p3?_a=BAMAJaa40",
     "y": 95,
@@ -163,7 +224,7 @@
     "hotspots": []
   },
   {
-    "id": 17,
+    "id": 23,
     "name": "B",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B_chl1na?_a=BAMAJaa40",
     "y": 0,
@@ -171,7 +232,7 @@
     "hotspots": []
   },
   {
-    "id": 18,
+    "id": 24,
     "name": "กำลังดำเนินการ......",
     "image": "https://cdn.polyhaven.com/asset_img/primary/mirrored_hall.png?height=760",
     "y": 95,
@@ -179,7 +240,7 @@
     "hotspots": []
   },
   {
-    "id": 19,
+    "id": 25,
     "name": "B3",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B3_d6ws7p?_a=BAMAJaa40",
     "y": 0,
@@ -187,7 +248,7 @@
     "hotspots": []
   },
   {
-    "id": 20,
+    "id": 26,
     "name": "B4",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B4_hwmfjx?_a=BAMAJaa40",
     "y": 0,
@@ -195,7 +256,7 @@
     "hotspots": []
   },
   {
-    "id": 21,
+    "id": 27,
     "name": "C",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/C_ryqdt2?_a=BAMAJaa40",
     "y": 0,
@@ -203,7 +264,7 @@
     "hotspots": []
   },
   {
-    "id": 22,
+    "id": 28,
     "name": "D",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D_mg1v5p?_a=BAMAJaa40",
     "y": 0,
@@ -211,7 +272,7 @@
     "hotspots": []
   },
   {
-    "id": 23,
+    "id": 29,
     "name": "D5",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D5_yozeen?_a=BAMAJaa40",
     "y": 0,
@@ -219,7 +280,7 @@
     "hotspots": []
   },
   {
-    "id": 24,
+    "id": 30,
     "name": "D6",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D6_tqupoc?_a=BAMAJaa40",
     "y": 0,
@@ -227,7 +288,7 @@
     "hotspots": []
   },
   {
-    "id": 25,
+    "id": 31,
     "name": "D8",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D8_tnyusa?_a=BAMAJaa40",
     "y": 0,
@@ -235,7 +296,7 @@
     "hotspots": []
   },
   {
-    "id": 26,
+    "id": 32,
     "name": "D7",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D7_ur5if9?_a=BAMAJaa40",
     "y": 0,
@@ -243,7 +304,7 @@
     "hotspots": []
   },
   {
-    "id": 27,
+    "id": 33,
     "name": "F",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/F_udwria?_a=BAMAJaa40",
     "y": 0,
@@ -251,7 +312,7 @@
     "hotspots": []
   },
   {
-    "id": 28,
+    "id": 34,
     "name": "E",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/E_kyfbvy?_a=BAMAJaa40",
     "y": 0,
@@ -259,7 +320,7 @@
     "hotspots": []
   },
   {
-    "id": 29,
+    "id": 35,
     "name": "G",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G_bkfcyt?_a=BAMAJaa40",
     "y": 0,
@@ -267,7 +328,7 @@
     "hotspots": []
   },
   {
-    "id": 30,
+    "id": 36,
     "name": "H",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/H_vg606m?_a=BAMAJaa40",
     "y": 0,
@@ -275,7 +336,7 @@
     "hotspots": []
   },
   {
-    "id": 31,
+    "id": 37,
     "name": "G1",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G1_lxlc8q?_a=BAMAJaa40",
     "y": 0,
@@ -283,7 +344,7 @@
     "hotspots": []
   },
   {
-    "id": 32,
+    "id": 38,
     "name": "G2",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G2_mo0gfw?_a=BAMAJaa40",
     "y": 0,
@@ -291,7 +352,7 @@
     "hotspots": []
   },
   {
-    "id": 33,
+    "id": 39,
     "name": "G3",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G3_mebgjf?_a=BAMAJaa40",
     "y": 0,
@@ -299,7 +360,7 @@
     "hotspots": []
   },
   {
-    "id": 34,
+    "id": 40,
     "name": "F3",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/F3_il1gfe?_a=BAMAJaa40",
     "y": 0,
@@ -307,7 +368,7 @@
     "hotspots": []
   },
   {
-    "id": 35,
+    "id": 41,
     "name": "F1",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/F1_x2rqsm?_a=BAMAJaa40",
     "y": 0,
@@ -315,7 +376,7 @@
     "hotspots": []
   },
   {
-    "id": 36,
+    "id": 42,
     "name": "F2",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/F2_mytce2?_a=BAMAJaa40",
     "y": 0,
@@ -323,7 +384,7 @@
     "hotspots": []
   },
   {
-    "id": 37,
+    "id": 43,
     "name": "G4",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/G4_ldvv4h?_a=BAMAJaa40",
     "y": 0,
@@ -331,7 +392,7 @@
     "hotspots": []
   },
   {
-    "id": 38,
+    "id": 44,
     "name": "I",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/I_gmj9rb?_a=BAMAJaa40",
     "y": 0,
@@ -339,7 +400,7 @@
     "hotspots": []
   },
   {
-    "id": 39,
+    "id": 45,
     "name": "J",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J_ul2602?_a=BAMAJaa40",
     "y": 0,
@@ -347,7 +408,7 @@
     "hotspots": []
   },
   {
-    "id": 40,
+    "id": 46,
     "name": "J1",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J1_eymobi?_a=BAMAJaa40",
     "y": 0,
@@ -355,7 +416,7 @@
     "hotspots": []
   },
   {
-    "id": 41,
+    "id": 47,
     "name": "J2",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J2_krm7x6?_a=BAMAJaa40",
     "y": 0,
@@ -363,7 +424,7 @@
     "hotspots": []
   },
   {
-    "id": 42,
+    "id": 48,
     "name": "J3",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J3_yuvy4p?_a=BAMAJaa40",
     "y": 0,
@@ -371,7 +432,7 @@
     "hotspots": []
   },
   {
-    "id": 43,
+    "id": 49,
     "name": "J4",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J4_elevvq?_a=BAMAJaa40",
     "y": 0,
@@ -379,7 +440,7 @@
     "hotspots": []
   },
   {
-    "id": 44,
+    "id": 50,
     "name": "J5",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J5_jqy30e?_a=BAMAJaa40",
     "y": 0,
@@ -387,7 +448,7 @@
     "hotspots": []
   },
   {
-    "id": 45,
+    "id": 51,
     "name": "J6",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/J6_h9pm2v?_a=BAMAJaa40",
     "y": 0,
@@ -395,7 +456,7 @@
     "hotspots": []
   },
   {
-    "id": 46,
+    "id": 52,
     "name": "L",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/L_ojad1c?_a=BAMAJaa40",
     "y": 0,
@@ -403,11 +464,26 @@
     "hotspots": []
   },
   {
-    "id": 47,
+    "id": 53,
+    "name": "END",
+    "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/END_cd9kgq?_a=BAMAJaa40",
+    "y": 270,
+    "description": "",
+    "hotspots": [],
+    "waypoints":[
+      { "label": "02", "x": 3, "y": 0.7, "z": 0, "targetRoom": 5 },
+      { "label": "K", "x": 0.05, "y": 1.6, "z": -2, "targetRoom": 54 }
+    ]
+  },
+  {
+    "id": 54,
     "name": "K",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/K_ylbcnz?_a=BAMAJaa40",
-    "y": 0,
+    "y": 270,
     "description": "",
-    "hotspots": []
+    "hotspots": [],
+    "waypoints":[
+      { "label": "END", "x": -1.55, "y": 0.85, "z": 0, "targetRoom": 53 }
+    ]
   }
 ]
