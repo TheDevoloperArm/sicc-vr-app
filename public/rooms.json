@@ -99,24 +99,25 @@
     "id": 8,
     "name": "05",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/05_zogpmu?_a=BAMAJaa40",
-    "y": 180,
+    "y": 270,
     "description": "",
     "hotspots": [],
     "waypoints":[
-      { "label": "03", "x": -0.15, "y": 1, "z": -2, "targetRoom": 6 },
-      { "label": "10", "x": 0, "y": 0.7, "z": 2.7, "targetRoom": 3 }
+      { "label": "04", "x": 0, "y": 1, "z": 2, "targetRoom": 7 },
+      { "label": "06", "x": -1.1, "y": 1, "z": -2, "targetRoom": 9 },
+      { "label": "6A", "x": 0.5, "y": 0.9, "z": -1.7, "targetRoom": 10 }
     ]
   },
   {
     "id": 9,
     "name": "06",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/06_ki6xor?_a=BAMAJaa40",
-    "y": 180,
+    "y": 265,
     "description": "",
     "hotspots": [],
     "waypoints":[
-      { "label": "ทางเข้า", "x": -0.15, "y": 1, "z": -2, "targetRoom": 5 },
-      { "label": "ด้านหน้า", "x": 0, "y": 0.7, "z": 2.7, "targetRoom": 3 }
+      { "label": "05", "x": -2.5, "y": 0.7, "z": 2, "targetRoom": 8 },
+      { "label": "6A", "x": 0.1, "y": 0.8, "z": 3.2, "targetRoom": 10 }
     ]
   },
   {
@@ -125,7 +126,11 @@
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/6A_bhydqo?_a=BAMAJaa40",
     "y": -90,
     "description": "",
-    "hotspots": []
+    "hotspots": [],
+    "waypoints":[
+      { "label": "06", "x": 0.2, "y": 1, "z": -2.2, "targetRoom": 9 },
+      { "label": "05", "x": -0.8, "y": 1, "z": 0.8, "targetRoom": 8 }
+    ]
   },
   {
     "id": 11,
