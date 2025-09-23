@@ -173,14 +173,14 @@
     "id": 14,
     "name": "10",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/10_kxldyl?_a=BAMAJaa40",
-    "y": 95,
+    "y": 270,
     "description": "",
     "hotspots": [],
     "waypoints":[
-      { "label": "04", "x": -0.2, "y": 0.9, "z": -3.5, "targetRoom": 7 },
-      { "label": "11", "x": -2, "y": 0.9, "z": 0.2, "targetRoom": 15 },
-      { "label": "13", "x": 2, "y": 0.9, "z": 0.2, "targetRoom": 17 },
-      { "label": "14", "x": 0, "y": 0.9, "z": 2, "targetRoom": 18 }
+      { "label": "04", "x": -0.2, "y": 0.9, "z": 3.5, "targetRoom": 7 },
+      { "label": "11", "x": 2, "y": 0.9, "z": 0.2, "targetRoom": 15 },
+      { "label": "13", "x": -2, "y": 0.9, "z": -0.2, "targetRoom": 17 },
+      { "label": "14", "x": 0.1, "y": 0.9, "z": -2, "targetRoom": 18 }
     ]
   },
   {
