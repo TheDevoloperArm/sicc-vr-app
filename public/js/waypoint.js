@@ -40,7 +40,9 @@ function createWaypoints(waypoints) {
     const labelEl = document.createElement("a-entity");
     labelEl.setAttribute(
       "troika-text",
-      `value: ${wp.label}; fontSize: 0.08; color: yellow`
+      `value: ${wp.label}; fontSize: 0.08; color: #F6F1E9;
+       outlineWidth: 0.003;
+       outlineColor: #4F200D;`
     );
     labelEl.setAttribute("position", "0 -0.3 0");
     labelEl.setAttribute("face-camera", "");
