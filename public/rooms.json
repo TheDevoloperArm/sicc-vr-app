@@ -4,9 +4,7 @@
     "name": "1",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/1_sj80fk",
     "y": -87,
-    "hotspots": [
-      
-    ],
+    "hotspots": [],
     "waypoints": [
       { "label": "ทางเข้าชม", "x": -0.05, "y": 1.2, "z": -2.7, "targetRoom": 2 }
     ]
@@ -16,12 +14,10 @@
     "name": "1-A",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/1-A_mywsjw?_a=BAMAJaa40",
     "y": -90,
-    "hotspots": [
-    ],
+    "hotspots": [],
     "waypoints": [
       { "label": "ทางเข้า", "x": -0.2, "y": 1.3, "z": -2.7, "targetRoom": 3 },
       { "label": "ด้านหน้า", "x": 0, "y": 1.1, "z": 2.5, "targetRoom": 1 }
-
     ]
   },
   {
@@ -29,17 +25,8 @@
     "name": "1-B",
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/1-B_xorco8?_a=BAMAJaa40",
     "y": -95,
-    "hotspots": [
-      {
-        "label": "เครื่องปั้นดินเผาอายุ 500 ปี",
-        "text": "ข้อมูลวัตถุ B",
-        "linkToRoom": null,
-        "icon": "./assets/icon/locate.png",
-        "popupImage": "https://res.cloudinary.com/dzczqfs82/image/upload/q_auto/f_auto/02_nqkxpf?_a=BAMAJaa40",
-        "position": { "x": 1, "y": 1.2, "z": -2 }
-      }
-    ],
-    "waypoints":[
+    "hotspots": [],
+    "waypoints": [
       { "label": "ทางเข้า", "x": -0.15, "y": 1, "z": -2, "targetRoom": 4 },
       { "label": "ด้านหน้า", "x": 0, "y": 1.1, "z": 1, "targetRoom": 2 }
     ]
@@ -51,7 +38,7 @@
     "y": 180,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "02", "x": -0.15, "y": 1, "z": -2, "targetRoom": 5 },
       { "label": "1-B", "x": 0, "y": 0.7, "z": 2.7, "targetRoom": 3 }
     ]
@@ -63,7 +50,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "03", "x": -0.15, "y": 1.2, "z": -3, "targetRoom": 6 },
       { "label": "END", "x": -2.6, "y": 1, "z": -0.5, "targetRoom": 53 },
       { "label": "1-C", "x": 0.4, "y": 0.7, "z": 3, "targetRoom": 4 }
@@ -76,7 +63,7 @@
     "y": 180,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "02", "x": 0.2, "y": 1.2, "z": 2.7, "targetRoom": 5 },
       { "label": "04", "x": 0.6, "y": 1, "z": -4.2, "targetRoom": 7 }
     ]
@@ -88,7 +75,7 @@
     "y": 260,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "03", "x": 3, "y": 1.2, "z": 0.3, "targetRoom": 6 },
       { "label": "05", "x": -0.15, "y": 1, "z": -2, "targetRoom": 8 },
       { "label": "07", "x": 0.2, "y": 1, "z": 3.3, "targetRoom": 11 },
@@ -101,8 +88,49 @@
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/05_zogpmu?_a=BAMAJaa40",
     "y": 270,
     "description": "",
-    "hotspots": [],
-    "waypoints":[
+    "hotspots": [
+      {
+        "label": "เครื่องเคลือบดินเผา",
+        "text": "เครื่องเคลือบดินเผา",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#05-1",
+        "position": { "x": -2, "y": 1, "z": 1.1 }
+      },
+      {
+        "label": "หม้อดิน",
+        "text": "เครื่องเคลือบดินเผา",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#05-2",
+        "position": { "x": -2, "y": 1, "z": -0.5 }
+      },
+      {
+        "label": "แผนผังเมือง",
+        "text": "เครื่องเคลือบดินเผา",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#05-3",
+        "position": { "x": -0.2, "y": 1.2, "z": -2 }
+      },
+      {
+        "label": "เครื่องเคลือบดินเผา",
+        "text": "เครื่องเคลือบดินเผา",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#05-4",
+        "position": { "x": 2, "y": 1, "z": -0.2 }
+      },
+      {
+        "label": "เครื่องเคลือบดินเผา",
+        "text": "เครื่องเคลือบดินเผา",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#05-5",
+        "position": { "x": 2, "y": 1, "z": 1.1 }
+      }
+    ],
+    "waypoints": [
       { "label": "04", "x": 0, "y": 1, "z": 2, "targetRoom": 7 },
       { "label": "06", "x": -1.1, "y": 1, "z": -2, "targetRoom": 9 },
       { "label": "6A", "x": 0.5, "y": 0.9, "z": -1.7, "targetRoom": 10 }
@@ -115,7 +143,7 @@
     "y": 265,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "05", "x": -2.5, "y": 0.7, "z": 2, "targetRoom": 8 },
       { "label": "6A", "x": 0.1, "y": 0.8, "z": 3.2, "targetRoom": 10 }
     ]
@@ -127,7 +155,7 @@
     "y": -90,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "06", "x": 0.2, "y": 1, "z": -2.2, "targetRoom": 9 },
       { "label": "05", "x": -0.8, "y": 1, "z": 0.8, "targetRoom": 8 }
     ]
@@ -139,7 +167,7 @@
     "y": 180,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "04", "x": 0, "y": 1.1, "z": 3, "targetRoom": 7 },
       { "label": "A1", "x": -1.6, "y": 1.3, "z": 0.4, "targetRoom": 21 },
       { "label": "08", "x": 0.8, "y": 0.7, "z": -1.9, "targetRoom": 12 }
@@ -152,7 +180,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "07", "x": -0.9, "y": 0.9, "z": 1.5, "targetRoom": 11 },
       { "label": "09", "x": 1.8, "y": 0.9, "z": 2.8, "targetRoom": 13 }
     ]
@@ -164,7 +192,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "08", "x": -1.9, "y": 0.9, "z": -3, "targetRoom": 12 },
       { "label": "13", "x": 2.2, "y": 0.9, "z": 1, "targetRoom": 17 }
     ]
@@ -176,7 +204,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "04", "x": -0.2, "y": 0.9, "z": 3.5, "targetRoom": 7 },
       { "label": "11", "x": 2, "y": 0.9, "z": 0.2, "targetRoom": 15 },
       { "label": "13", "x": -2, "y": 0.9, "z": -0.2, "targetRoom": 17 },
@@ -190,7 +218,7 @@
     "y": 95,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "10", "x": -3, "y": 0.9, "z": -1, "targetRoom": 14 }
     ]
   },
@@ -201,9 +229,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
-      { "label": "14", "x": 0, "y": 1, "z": 3.2, "targetRoom": 18 }
-    ]
+    "waypoints": [{ "label": "14", "x": 0, "y": 1, "z": 3.2, "targetRoom": 18 }]
   },
   {
     "id": 17,
@@ -212,7 +238,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "09", "x": 1.7, "y": 0.9, "z": -2, "targetRoom": 13 },
       { "label": "10", "x": -1.8, "y": 0.9, "z": -0.7, "targetRoom": 14 }
     ]
@@ -224,7 +250,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "10", "x": 0.05, "y": 1.4, "z": 4, "targetRoom": 14 },
       { "label": "12", "x": 0.3, "y": 0.9, "z": -3.5, "targetRoom": 16 },
       { "label": "15", "x": -5, "y": 1, "z": -0.2, "targetRoom": 19 }
@@ -237,7 +263,7 @@
     "y": 0,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "14", "x": -2.3, "y": 1.2, "z": 2, "targetRoom": 18 }
     ]
   },
@@ -255,8 +281,25 @@
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/A1_jchbdu?_a=BAMAJaa40",
     "y": 95,
     "description": "",
-    "hotspots": [],
-    "waypoints":[
+    "hotspots": [
+      {
+        "label": "วิถีชีวิตชาวส่วย",
+        "text": "วิถีชีวิตชาวส่วย",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#A1-1",
+        "position": { "x": 0, "y": 1, "z": 1.5 }
+      },
+      {
+        "label": "การคล้องช้าง",
+        "text": "การคล้องช้าง",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#A1-2",
+        "position": { "x": -2, "y": 1, "z": -0.1 }
+      }
+    ],
+    "waypoints": [
       { "label": "07", "x": 1.5, "y": 0.9, "z": 0, "targetRoom": 11 },
       { "label": "A", "x": 0.3, "y": 0.7, "z": -2.5, "targetRoom": 22 }
     ]
@@ -268,7 +311,7 @@
     "y": 95,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "B", "x": 2.4, "y": 0.9, "z": -0.2, "targetRoom": 23 },
       { "label": "A1", "x": 0.3, "y": 0.7, "z": -2.5, "targetRoom": 21 },
       { "label": "H", "x": -2.4, "y": 0.7, "z": 0.1, "targetRoom": 36 }
@@ -280,8 +323,17 @@
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B_chl1na?_a=BAMAJaa40",
     "y": 340,
     "description": "",
-    "hotspots": [],
-    "waypoints":[
+    "hotspots": [
+      {
+        "label": "ความเชื่อและศาสนา",
+        "text": "ความเชื่อและศาสนา",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#B1-1",
+        "position": { "x": 0, "y": 1.5, "z": 2 }
+      }
+    ],
+    "waypoints": [
       { "label": "A", "x": 2.4, "y": 0.9, "z": 1, "targetRoom": 22 },
       { "label": "B2", "x": -1.7, "y": 0.7, "z": -0.2, "targetRoom": 24 },
       { "label": "B3", "x": -2.5, "y": 0.7, "z": -1.6, "targetRoom": 25 },
@@ -295,7 +347,7 @@
     "y": 230,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "B", "x": -1.8, "y": 0.9, "z": -0.2, "targetRoom": 23 },
       { "label": "B3", "x": 1.3, "y": 0.7, "z": 1.8, "targetRoom": 25 }
     ]
@@ -306,8 +358,49 @@
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/B3_d6ws7p?_a=BAMAJaa40",
     "y": 275,
     "description": "",
-    "hotspots": [],
-    "waypoints":[
+    "hotspots": [
+      {
+        "label": "เศียร์พระศิวะ",
+        "text": "เศียร์พระศิวะ",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#B3-1",
+        "position": { "x": -2.4, "y": 1.1, "z": -1.9 }
+      },
+      {
+        "label": "ประติมากรรมบุรุษ",
+        "text": "ประติมากรรมบุรุษ",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#B3-2",
+        "position": { "x": -0.8, "y": 1.2, "z": -1.9 }
+      },
+      {
+        "label": "พระพุทธรูปนาคปรกทรงเครื่อง",
+        "text": "พระพุทธรูปนาคปรกทรงเครื่อง",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#B3-3",
+        "position": { "x": 0, "y": 1.4, "z": -1.9 }
+      },
+      {
+        "label": "แม่พิมพ์พระพิมพ์ (พระกรุนาดูน)",
+        "text": "แม่พิมพ์พระพิมพ์ (พระกรุนาดูน)",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#B3-4",
+        "position": { "x": 0.5, "y": 1.2, "z": -1.9 }
+      },
+      {
+        "label": "เศียร์พระพุทธรูป",
+        "text": "เศียร์พระพุทธรูป",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#B3-5",
+        "position": { "x": 0.4, "y": 1.5, "z": -1.9 }
+      }
+    ],
+    "waypoints": [
       { "label": "B2", "x": -1.9, "y": 0.9, "z": 0.6, "targetRoom": 24 },
       { "label": "B4", "x": 2.8, "y": 0.8, "z": 0.2, "targetRoom": 26 }
     ]
@@ -319,7 +412,7 @@
     "y": 350,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "B3", "x": -0.6, "y": 0.9, "z": 2, "targetRoom": 25 },
       { "label": "D", "x": 2, "y": 0.7, "z": 0, "targetRoom": 28 }
     ]
@@ -330,8 +423,33 @@
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/C_ryqdt2?_a=BAMAJaa40",
     "y": 95,
     "description": "",
-    "hotspots": [],
-    "waypoints":[
+    "hotspots": [
+      {
+        "label": "เดือนสิบสองบุญกฐิน",
+        "text": "เดือนสิบสองบุญกฐิน",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#C1-1",
+        "position": { "x": -1.5, "y": 3.7, "z": 0 }
+      },
+      {
+        "label": "เดือนสิบบุญข้าวสาก",
+        "text": "เดือนสิบบุญข้าวสาก",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#C1-2",
+        "position": { "x": 1.5, "y": 3.7, "z": 0 }
+      },
+      {
+        "label": "เดือนสิบเอ็ดบุญออกพรรษา",
+        "text": "เดือนสิบเอ็ดบุญออกพรรษา",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "popupImage": "#C1-3",
+        "position": { "x": 0, "y": 3.8, "z": 0.3}
+      }
+    ],
+    "waypoints": [
       { "label": "B", "x": 2.2, "y": 0.9, "z": 0, "targetRoom": 23 },
       { "label": "D", "x": -3, "y": 0.7, "z": 0, "targetRoom": 28 }
     ]
@@ -343,7 +461,7 @@
     "y": 10,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "B4", "x": 2, "y": 0.7, "z": 0, "targetRoom": 26 },
       { "label": "C", "x": 0, "y": 0.7, "z": -3, "targetRoom": 27 },
       { "label": "D5", "x": -0.3, "y": 0.7, "z": 2, "targetRoom": 29 },
@@ -357,7 +475,7 @@
     "y": 0,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "D", "x": -3, "y": 0.7, "z": 0, "targetRoom": 28 },
       { "label": "D6", "x": -0.3, "y": 0.9, "z": -2.2, "targetRoom": 30 }
     ]
@@ -369,7 +487,7 @@
     "y": 0,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "D5", "x": 0.5, "y": 0.7, "z": 1.8, "targetRoom": 29 },
       { "label": "D7", "x": 0, "y": 0.7, "z": -3.2, "targetRoom": 31 },
       { "label": "D8", "x": -2.3, "y": 0.5, "z": -2.2, "targetRoom": 32 }
@@ -382,7 +500,7 @@
     "y": 0,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "D6", "x": -0.2, "y": 0.9, "z": 2.2, "targetRoom": 30 },
       { "label": "F", "x": 2.5, "y": 0.7, "z": -0.5, "targetRoom": 33 }
     ]
@@ -402,7 +520,7 @@
     "y": 5,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "D7", "x": -1.9, "y": 0.7, "z": 0, "targetRoom": 31 },
       { "label": "E", "x": -0.2, "y": 0.9, "z": 2.2, "targetRoom": 34 },
       { "label": "G", "x": 3, "y": 0.7, "z": -0.6, "targetRoom": 35 }
@@ -415,7 +533,7 @@
     "y": 0,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "D", "x": 0.2, "y": 0.9, "z": -2.5, "targetRoom": 28 },
       { "label": "F", "x": 0.2, "y": 0.7, "z": 2.7, "targetRoom": 33 }
     ]
@@ -427,7 +545,7 @@
     "y": 0,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "G1", "x": 2.5, "y": 0.7, "z": 0.2, "targetRoom": 37 },
       { "label": "F", "x": 0.2, "y": 0.9, "z": -3, "targetRoom": 33 },
       { "label": "H", "x": 0, "y": 0.7, "z": 3, "targetRoom": 36 }
@@ -440,7 +558,7 @@
     "y": 0,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "A", "x": 0.4, "y": 0.7, "z": 3, "targetRoom": 22 },
       { "label": "G", "x": -3, "y": 0.7, "z": -0.1, "targetRoom": 35 }
     ]
@@ -452,7 +570,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "G", "x": 1.8, "y": 0.7, "z": 0.2, "targetRoom": 35 },
       { "label": "F1", "x": -0.2, "y": 0.9, "z": 2, "targetRoom": 41 },
       { "label": "G2", "x": -3, "y": 0.7, "z": 0.2, "targetRoom": 38 }
@@ -465,7 +583,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "G1", "x": 2, "y": 0.7, "z": 0, "targetRoom": 37 },
       { "label": "G3", "x": -2.5, "y": 0.7, "z": -0.1, "targetRoom": 39 },
       { "label": "F2", "x": -0.2, "y": 0.7, "z": 3, "targetRoom": 42 }
@@ -478,7 +596,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "F3", "x": 0.2, "y": 0.9, "z": 1.6, "targetRoom": 43 },
       { "label": "G2", "x": 2, "y": 0.7, "z": 0.2, "targetRoom": 38 },
       { "label": "G4", "x": -2, "y": 0.7, "z": 0.2, "targetRoom": 40 }
@@ -491,7 +609,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "G3", "x": 2, "y": 0.7, "z": 0.2, "targetRoom": 39 },
       { "label": "I", "x": -0.5, "y": 0.7, "z": 1.6, "targetRoom": 44 }
     ]
@@ -503,7 +621,7 @@
     "y": 280,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "G1", "x": -0.2, "y": 0.7, "z": 2.5, "targetRoom": 37 },
       { "label": "F2", "x": 1.6, "y": 0.7, "z": -0.1, "targetRoom": 42 }
     ]
@@ -515,7 +633,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "G2", "x": 0.2, "y": 0.7, "z": 2.7, "targetRoom": 38 },
       { "label": "F1", "x": -1.5, "y": 0.7, "z": 0.2, "targetRoom": 41 },
       { "label": "F3", "x": 1.6, "y": 0.7, "z": 0.9, "targetRoom": 43 }
@@ -528,7 +646,7 @@
     "y": 0,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "G3", "x": 1.8, "y": 0.7, "z": 0, "targetRoom": 39 },
       { "label": "F2", "x": -1.3, "y": 0.7, "z": 2.5, "targetRoom": 42 }
     ]
@@ -540,7 +658,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "G4", "x": -1.5, "y": 0.7, "z": -0.1, "targetRoom": 40 },
       { "label": "J", "x": -0.3, "y": 0.7, "z": 2, "targetRoom": 45 }
     ]
@@ -552,7 +670,7 @@
     "y": 90,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "I", "x": 2, "y": 0.7, "z": 0.6, "targetRoom": 44 },
       { "label": "J1", "x": -0.1, "y": 0.7, "z": 3, "targetRoom": 46 },
       { "label": "L", "x": -0.2, "y": 0.7, "z": -3, "targetRoom": 52 }
@@ -565,7 +683,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "J", "x": 0.3, "y": 0.7, "z": 3.5, "targetRoom": 45 },
       { "label": "J2", "x": -1.8, "y": 0.7, "z": 0, "targetRoom": 47 },
       { "label": "J3", "x": 0.8, "y": 0.7, "z": -2.7, "targetRoom": 48 },
@@ -579,7 +697,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "J1", "x": -0.5, "y": 0.7, "z": 2, "targetRoom": 46 },
       { "label": "J3", "x": 2.6, "y": 0.7, "z": 2.5, "targetRoom": 48 }
     ]
@@ -591,7 +709,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "J1", "x": -0.7, "y": 0.7, "z": 2.9, "targetRoom": 46 },
       { "label": "J2", "x": -2.5, "y": 0.7, "z": 2, "targetRoom": 47 },
       { "label": "J4", "x": 2.4, "y": 0.7, "z": 1.6, "targetRoom": 49 }
@@ -604,7 +722,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "J1", "x": 1.3, "y": 0.7, "z": 2.7, "targetRoom": 46 },
       { "label": "J2", "x": 0.6, "y": 0.7, "z": 4.3, "targetRoom": 47 },
       { "label": "J3", "x": -2, "y": 0.7, "z": 2, "targetRoom": 48 },
@@ -618,7 +736,7 @@
     "y": 275,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "J4", "x": -1.7, "y": 0.7, "z": 0.5, "targetRoom": 49 },
       { "label": "J6", "x": 0, "y": 0.7, "z": -2, "targetRoom": 51 }
     ]
@@ -630,7 +748,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "J5", "x": 0, "y": 0.7, "z": -2.5, "targetRoom": 50 }
     ]
   },
@@ -641,7 +759,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "J", "x": 3.6, "y": 0.7, "z": -0.8, "targetRoom": 45 },
       { "label": "K", "x": -2.6, "y": 0.7, "z": -0.5, "targetRoom": 54 }
     ]
@@ -653,7 +771,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "02", "x": 3, "y": 0.7, "z": 0, "targetRoom": 5 },
       { "label": "K", "x": 0.05, "y": 1.6, "z": -2, "targetRoom": 54 }
     ]
@@ -665,7 +783,7 @@
     "y": 270,
     "description": "",
     "hotspots": [],
-    "waypoints":[
+    "waypoints": [
       { "label": "L", "x": -0.2, "y": 0.7, "z": -3, "targetRoom": 52 },
       { "label": "END", "x": -1.55, "y": 0.85, "z": 0, "targetRoom": 53 }
     ]
