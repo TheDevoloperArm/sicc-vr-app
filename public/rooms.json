@@ -106,14 +106,6 @@
         "position": { "x": -2, "y": 1, "z": -0.5 }
       },
       {
-        "label": "แผนผังเมือง",
-        "text": "เครื่องเคลือบดินเผา",
-        "linkToRoom": null,
-        "icon": "#infoIcon",
-        "popupImage": "#05-3",
-        "position": { "x": -0.2, "y": 1.2, "z": -2 }
-      },
-      {
         "label": "เครื่องเคลือบดินเผา",
         "text": "เครื่องเคลือบดินเผา",
         "linkToRoom": null,
@@ -446,7 +438,7 @@
         "linkToRoom": null,
         "icon": "#infoIcon",
         "popupImage": "#C1-3",
-        "position": { "x": 0, "y": 3.8, "z": 0.3}
+        "position": { "x": 0, "y": 3.8, "z": 0.3 }
       }
     ],
     "waypoints": [
