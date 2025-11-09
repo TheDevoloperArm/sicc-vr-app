@@ -91,35 +91,51 @@
     "hotspots": [
       {
         "label": "เครื่องเคลือบดินเผา",
-        "text": "เครื่องเคลือบดินเผา",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#05-1",
-        "position": { "x": -2, "y": 1, "z": 1.1 }
+        "position": { "x": -2, "y": 1, "z": 1.1 },
+        "info": [
+          {
+            "img": "#05-1",
+            "text": "เครื่องเคลือบดินเผา"
+          }
+        ]
       },
       {
         "label": "หม้อดิน",
-        "text": "เครื่องเคลือบดินเผา",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#05-2",
-        "position": { "x": -2, "y": 1, "z": -0.5 }
+        "position": { "x": -2, "y": 1, "z": -0.5 },
+        "info": [
+          {
+            "img": "#05-2",
+            "text": "เครื่องเคลือบดินเผา"
+          }
+        ]
       },
       {
         "label": "เครื่องเคลือบดินเผา",
-        "text": "เครื่องเคลือบดินเผา",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#05-4",
-        "position": { "x": 2, "y": 1, "z": -0.2 }
+        "position": { "x": 2, "y": 1, "z": -0.2 },
+        "info": [
+          {
+            "img": "#05-4",
+            "text": "เครื่องเคลือบดินเผา"
+          }
+        ]
       },
       {
         "label": "เครื่องเคลือบดินเผา",
-        "text": "เครื่องเคลือบดินเผา",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#05-5",
-        "position": { "x": 2, "y": 1, "z": 1.1 }
+        "position": { "x": 2, "y": 1, "z": 1.1 },
+        "info": [
+          {
+            "img": "#05-5",
+            "text": "เครื่องเคลือบดินเผา"
+          }
+        ]
       }
     ],
     "waypoints": [
@@ -276,19 +292,27 @@
     "hotspots": [
       {
         "label": "วิถีชีวิตชาวส่วย",
-        "text": "วิถีชีวิตชาวส่วย",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#A1-1",
-        "position": { "x": 0, "y": 1, "z": 1.5 }
+        "position": { "x": 0, "y": 1, "z": 1.5 },
+        "info": [
+          {
+            "img": "#A1-1",
+            "text": "วิถีชีวิตชาวส่วย"
+          }
+        ]
       },
       {
         "label": "การคล้องช้าง",
-        "text": "การคล้องช้าง",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#A1-2",
-        "position": { "x": -2, "y": 1, "z": -0.1 }
+        "position": { "x": -2, "y": 1, "z": -0.1 },
+        "info": [
+          {
+            "img": "#A1-2",
+            "text": "การคล้องช้าง"
+          }
+        ]
       }
     ],
     "waypoints": [
@@ -318,11 +342,15 @@
     "hotspots": [
       {
         "label": "ความเชื่อและศาสนา",
-        "text": "ความเชื่อและศาสนา",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#B1-1",
-        "position": { "x": 0, "y": 1.5, "z": 2 }
+        "position": { "x": 0, "y": 1.5, "z": 2 },
+        "info": [
+          {
+            "img": "#B1-1",
+            "text": "ความเชื่อและศาสนา"
+          }
+        ]
       }
     ],
     "waypoints": [
@@ -353,43 +381,63 @@
     "hotspots": [
       {
         "label": "เศียร์พระศิวะ",
-        "text": "เศียร์พระศิวะ",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#B3-1",
-        "position": { "x": -2.4, "y": 1.1, "z": -1.9 }
+        "position": { "x": -2.4, "y": 1.1, "z": -1.9 },
+        "info": [
+          {
+            "img": "#B3-1",
+            "text": "เศียร์พระศิวะ"
+          }
+        ]
       },
       {
         "label": "ประติมากรรมบุรุษ",
-        "text": "ประติมากรรมบุรุษ",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#B3-2",
-        "position": { "x": -0.8, "y": 1.2, "z": -1.9 }
+        "position": { "x": -0.8, "y": 1.2, "z": -1.9 },
+        "info": [
+          {
+            "img": "#B3-2",
+            "text": "ประติมากรรมบุรุษ"
+          }
+        ]
       },
       {
         "label": "พระพุทธรูปนาคปรกทรงเครื่อง",
-        "text": "พระพุทธรูปนาคปรกทรงเครื่อง",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#B3-3",
-        "position": { "x": 0, "y": 1.4, "z": -1.9 }
+        "position": { "x": 0, "y": 1.4, "z": -1.9 },
+        "info": [
+          {
+            "img": "#B3-3",
+            "text": "พระพุทธรูปนาคปรกทรงเครื่อง"
+          }
+        ]
       },
       {
         "label": "แม่พิมพ์พระพิมพ์ (พระกรุนาดูน)",
-        "text": "แม่พิมพ์พระพิมพ์ (พระกรุนาดูน)",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#B3-4",
-        "position": { "x": 0.5, "y": 1.2, "z": -1.9 }
+        "position": { "x": 0.5, "y": 1.2, "z": -1.9 },
+        "info": [
+          {
+            "img": "#B3-4",
+            "text": "แม่พิมพ์พระพิมพ์ (พระกรุนาดูน)"
+          }
+        ]
       },
       {
         "label": "เศียร์พระพุทธรูป",
-        "text": "เศียร์พระพุทธรูป",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#B3-5",
-        "position": { "x": 0.4, "y": 1.5, "z": -1.9 }
+        "position": { "x": 0.4, "y": 1.5, "z": -1.9 },
+        "info": [
+          {
+            "img": "#B3-5",
+            "text": "เศียร์พระพุทธรูป"
+          }
+        ]
       }
     ],
     "waypoints": [
@@ -418,27 +466,39 @@
     "hotspots": [
       {
         "label": "เดือนสิบสองบุญกฐิน",
-        "text": "เดือนสิบสองบุญกฐิน",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#C1-1",
-        "position": { "x": -1.5, "y": 3.7, "z": 0 }
+        "position": { "x": -1.5, "y": 3.7, "z": 0 },
+        "info": [
+          {
+            "img": "#C1-1",
+            "text": "เดือนสิบสองบุญกฐิน"
+          }
+        ]
       },
       {
         "label": "เดือนสิบบุญข้าวสาก",
-        "text": "เดือนสิบบุญข้าวสาก",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#C1-2",
-        "position": { "x": 1.5, "y": 3.7, "z": 0 }
+        "position": { "x": 1.5, "y": 3.7, "z": 0 },
+        "info": [
+          {
+            "img": "#C1-2",
+            "text": "เดือนสิบบุญข้าวสาก"
+          }
+        ]
       },
       {
         "label": "เดือนสิบเอ็ดบุญออกพรรษา",
-        "text": "เดือนสิบเอ็ดบุญออกพรรษา",
         "linkToRoom": null,
         "icon": "#infoIcon",
-        "popupImage": "#C1-3",
-        "position": { "x": 0, "y": 3.8, "z": 0.3 }
+        "position": { "x": 0, "y": 3.8, "z": 0.3 },
+        "info": [
+          {
+            "img": "#C1-3",
+            "text": "เดือนสิบเอ็ดบุญออกพรรษา"
+          }
+        ]
       }
     ],
     "waypoints": [
@@ -466,9 +526,26 @@
     "image": "https://res.cloudinary.com/dzczqfs82/image/upload/w_4096/q_auto/f_auto/D5_yozeen?_a=BAMAJaa40",
     "y": 0,
     "description": "",
-    "hotspots": [],
+    "hotspots": [
+      {
+        "label": "เครื่องถ้วยจีนที่พบในบุรีรัมย์",
+        "linkToRoom": null,
+        "icon": "#infoIcon",
+        "position": { "x": -2, "y": 0.8, "z": 0 },
+        "info": [
+          {
+            "img": "#D5-1",
+            "text": "เครื่องถ้วยจีนที่พบในบุรีรัมย์"
+          },
+          {
+            "img": "#D5-2",
+            "text": "เครื่องถ้วยจีนที่พบในบุรีรัมย์"
+          }
+        ]
+      }
+    ],
     "waypoints": [
-      { "label": "D", "x": -3, "y": 0.7, "z": 0, "targetRoom": 28 },
+      { "label": "D", "x": 2, "y": 0.7, "z": 0, "targetRoom": 28 },
       { "label": "D6", "x": -0.3, "y": 0.9, "z": -2.2, "targetRoom": 30 }
     ]
   },

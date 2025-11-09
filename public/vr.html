@@ -22,84 +22,15 @@
   <body>
     <a-scene cursor="rayOrigin: mouse" raycaster="objects: .clickable">
       <a-sky id="sky" rotation="0 0 0" crossorigin="anonymous"></a-sky>
-
       <a-assets>
-        <img
-          id="portIcon"
-          src="./assets/icon/port-waypoint.webp"
-          crossorigin="anonymous"
-        />
-        <img id="pinIcon" src="./assets/icon/locate.png" />
+        <img id="portIcon" src="./assets/icon/port-waypoint.webp" />
         <img id="titleImg" src="./assets/Title.png" />
         <img id="nextIcon" src="./assets/icon/next.PNG" />
         <img id="prevIcon" src="./assets/icon/previous.PNG" />
         <img id="homeIcon" src="./assets/home.png" />
         <img id="exitIcon" src="./assets/exit.png" />
         <img id="infoIcon" src="./assets/icon/info.PNG" />
-        <img
-          id="05-1"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541297/Screenshot_2025-09-24_220850_dr1toc.png"
-        />
-        <img
-          id="05-2"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541242/Screenshot_2025-09-24_221024_oaee2e.png"
-        />
-        <img id="05-3" src="" />
-        <img
-          id="05-4"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541244/Screenshot_2025-09-24_221151_wjemcl.png"
-        />
-        <img
-          id="05-5"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541246/Screenshot_2025-09-24_221258_sosptw.png"
-        />
-        <img
-          id="A1-1"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541250/Screenshot_2025-09-24_221406_lxryxc.png"
-        />
-        <img
-          id="A1-2"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541252/Screenshot_2025-09-24_221415_ydvk0m.png"
-        />
-        <img
-          id="B1-1"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541253/Screenshot_2025-09-24_221716_goqpjb.png"
-        />
-        <img
-          id="B3-1"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541229/Screenshot_2025-09-24_221753_duatc5.png"
-        />
-        <img
-          id="B3-2"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541229/Screenshot_2025-09-24_222012_sclvcg.png"
-        />
-        <img
-          id="B3-3"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541230/Screenshot_2025-09-24_222105_siontd.png"
-        />
-        <img
-          id="B3-4"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541232/Screenshot_2025-09-24_222116_nongm0.png"
-        />
-        <img
-          id="B3-5"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541231/Screenshot_2025-09-24_222124_lmbqas.png"
-        />
-        <img
-          id="C1-1"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541256/Screenshot_2025-09-24_222144_tm1iia.png"
-        />
-        <img
-          id="C1-2"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541261/Screenshot_2025-09-24_222628_rwlskb.png"
-        />
-        <img
-          id="C1-3"
-          src="https://res.cloudinary.com/dzczqfs82/image/upload/v1760541263/Screenshot_2025-09-24_222752_hqpidj.png"
-        />
-        <img id="" src="" />
       </a-assets>
-
       <a-camera id="cam" position="0 1.6 0" wasd-controls-enabled="false">
         <!-- Popup -->
         <a-entity
@@ -122,6 +53,45 @@
             width="3"
             height="1.7"
           ></a-image>
+
+          <!-- ส่วนปุ่มเปลี่ยนหน้าข้อมูล -->
+          <a-entity
+            id="popupText"
+            position="0 0.82 0.02"
+            troika-text="value: ข้อมูลที่กำลังโหลด...; fontSize: 0.05; color: #F6F1E9; align: center; wrapCount: 40;"
+          ></a-entity>
+
+          <a-entity
+            id="pageCounter"
+            position="0 -0.82 0.02"
+            troika-text="value: 1/1; fontSize: 0.04; color: #BBB; align: center;"
+          ></a-entity>
+
+          <a-entity id="pageControls">
+            <a-image
+              id="prevPageBtn"
+              class="clickable"
+              src="#prevIcon"
+              width="0.15"
+              height="0.15"
+              position="-0.2 -0.81 0.02"
+              event-set__mouseenter="scale: 1.2 1.2 1"
+              event-set__mouseleave="scale: 1 1 1"
+              visible="false"
+            ></a-image>
+
+            <a-image
+              id="nextPageBtn"
+              class="clickable"
+              src="#nextIcon"
+              width="0.15"
+              height="0.15"
+              position="0.2 -0.81 0.02"
+              event-set__mouseenter="scale: 1.2 1.2 1"
+              event-set__mouseleave="scale: 1 1 1"
+              visible="false"
+            ></a-image>
+          </a-entity>
 
           <!-- ปุ่มปิด -->
           <a-plane
@@ -151,7 +121,12 @@
           </a-entity>
         </a-entity>
 
-        <a-entity id="ui-menu" position="0 -0.8 -2" scale="1 1 1">
+        <a-entity
+          id="ui-menu"
+          position="0 -0.8 -2"
+          scale="1 1 1"
+          class="clickable"
+        >
           <a-entity
             id="prevRoomBtn"
             event-set__mouseenter="scale: 1.2 1.2 1"
@@ -230,7 +205,139 @@
 
       let isLoading = false;
       let rooms = [];
-      let currentRoom = 1;
+      let currentRoom = 29;
+      let totalRooms;
+
+      nextBtn.addEventListener("click", () => {
+        const nextRoom = currentRoom + 1 > totalRooms ? 1 : currentRoom + 1;
+        loadRoom(nextRoom);
+      });
+
+      prevBtn.addEventListener("click", () => {
+        const prevRoom = currentRoom - 1 < 1 ? totalRooms : currentRoom - 1;
+        loadRoom(prevRoom);
+      });
+
+      homeBtn.addEventListener("click", () => {
+        if (currentRoom === 1) return;
+        loadRoom(1);
+      });
+
+      exitBtn.addEventListener("click", () => {
+        if (isLoading) return;
+        window.location.href = "index.html";
+      });
+
+      // 🌟🌟🌟 โค้ดที่เพิ่ม/แก้ไข: เริ่มต้นเมื่อ A-Frame Scene พร้อม 🌟🌟🌟
+      const sceneEl = document.querySelector("a-scene");
+
+      sceneEl.addEventListener(
+        "loaded",
+        () => {
+          console.log("A-Scene loaded. Starting asset initialization...");
+          fetchAssets()
+            .then(() => {
+              console.log("Assets loaded. Starting room data fetch...");
+              return fetch("rooms.json"); // คืนค่า Promise ของการ fetch rooms.json
+            })
+            .then((res) => res.json())
+            .then((data) => {
+              rooms = data;
+
+              // 🌟 ตอนนี้เรียก loadRoom() ได้อย่างปลอดภัย เพราะ Asset ทั้งหมดถูกเพิ่มแล้ว
+              loadRoom(currentRoom);
+              totalRooms = data.length;
+              console.log("จำนวนห้องทั้งหมด: ", totalRooms);
+              // 🌟🌟🌟 1. เรียก adjustUI() ครั้งแรก เมื่อทุกอย่างโหลดเสร็จ 🌟🌟🌟
+              adjustUI();
+              // 🌟🌟🌟 2. ผูก Event resize กลับมา 🌟🌟🌟
+              window.addEventListener("resize", adjustUI);
+            })
+            .catch((error) => {
+              console.error("Error in initialization sequence:", error);
+            });
+        },
+        { once: true }
+      );
+
+      function loadRoom(roomId) {
+        if (isLoading) return;
+
+        const sky = document.querySelector("#sky");
+        const cam = document.querySelector("#cam");
+        const loading = document.querySelector("#loading");
+        const label = document.querySelector("#roomLabel");
+        // const scene = document.querySelector("a-scene"); // อ้างอิงถึง scene
+
+        isLoading = true;
+        loading.setAttribute("visible", true);
+
+        const room = rooms.find((r) => r.id === roomId);
+        currentRoom = roomId;
+
+        if (!room) {
+          alert("ไม่พบห้องนี้");
+          return;
+        }
+
+        // **สร้าง Listener ใหม่ และให้มันทำงานแค่ครั้งเดียว (Once)**
+        sky.addEventListener(
+          "materialtextureloaded",
+          function handler() {
+            // โค้ดที่อยู่ตรงนี้จะทำงาน **หลังจากภาพ VR ถูกโหลดและแสดงผลบน sky แล้วเท่านั้น**
+
+            cam.setAttribute("look-controls", "");
+            loading.setAttribute("visible", false);
+            isLoading = false;
+
+            // ตั้งชื่อห้อง
+            label.setAttribute(
+              "troika-text",
+              `value: ${room.name}; color: white;`
+            );
+            sky.setAttribute("rotation", `0 ${room.y} 0`);
+
+            // รีเซ็ตมุมกล้อง
+            cam.components["look-controls"].pitchObject.rotation.x = 0;
+            cam.components["look-controls"].yawObject.rotation.y = 0;
+
+            // 🌟 1. โหลด Hotspot ของห้องนั้น (โค้ดเดิม)
+            if (room.hotspots && room.hotspots.length > 0) {
+              createHotspots(room.hotspots);
+            } else {
+              createHotspots([]);
+            }
+
+            // 🌟 2. โหลด Waypoint ของห้องนั้น **(ส่วนที่ย้ายมา)**
+            if (room.waypoints && room.waypoints.length > 0) {
+              createWaypoints(room.waypoints);
+            } else {
+              createWaypoints([]); // ลบของเก่าออก
+            }
+
+            // **ลบ Event Listener นี้ออกทันทีที่ทำงานเสร็จ เพื่อป้องกันการทำงานซ้ำซ้อน**
+            sky.removeEventListener("materialtextureloaded", handler);
+          },
+          { once: true }
+        ); // เพิ่ม { once: true } เพื่อให้ Event ทำงานครั้งเดียว
+
+        cam.removeAttribute("look-controls");
+        sky.setAttribute("src", room.image);
+      }
+    </script>
+    <script src="./js/waypoint.js"></script>
+  </body>
+</html>
+
+<!-- <script>
+      const nextBtn = document.getElementById("nextRoomBtn");
+      const prevBtn = document.getElementById("prevRoomBtn");
+      const homeBtn = document.getElementById("homeRoomBtn");
+      const exitBtn = document.getElementById("exitBtn");
+
+      let isLoading = false;
+      let rooms = [];
+      let currentRoom = 29;
       let totalRooms;
 
       nextBtn.addEventListener("click", () => {
@@ -282,34 +389,6 @@
           return;
         }
 
-        // cam.removeAttribute("look-controls");
-        // sky.setAttribute("src", room.image);
-
-        // sky.addEventListener("materialtextureloaded", () => {
-        //   cam.setAttribute("look-controls", "");
-        //   loading.setAttribute("visible", false);
-        //   isLoading = false;
-
-        //   // ตั้งชื่อห้อง
-        //   label.setAttribute(
-        //     "troika-text",
-        //     `value: ${room.name}; color: white;`
-        //   );
-        //   sky.setAttribute("rotation", `0 ${room.y} 0`);
-
-        //   // รีเซ็ตมุมกล้อง
-        //   cam.components["look-controls"].pitchObject.rotation.x = 0;
-        //   cam.components["look-controls"].yawObject.rotation.y = 0;
-
-        //   // โหลด Hotspot ของห้องนั้น
-        //   if (room.hotspots && room.hotspots.length > 0) {
-        //     createHotspots(room.hotspots);
-        //   } else {
-        //     // ถ้าไม่มี hotspot ให้ลบ hotspot เดิมออก
-        //     createHotspots([]);
-        //   }
-        // });
-
         // **สร้าง Listener ใหม่ และให้มันทำงานแค่ครั้งเดียว (Once)**
         sky.addEventListener(
           "materialtextureloaded",
@@ -360,7 +439,4 @@
         //   createWaypoints([]); // ลบของเก่าออก
         // }
       }
-    </script>
-    <script src="./js/waypoint.js"></script>
-  </body>
-</html>
+    </script> -->
