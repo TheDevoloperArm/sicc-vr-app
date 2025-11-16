@@ -10,6 +10,7 @@
         margin: 0;
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.2.0/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
     <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
     <script src="https://unpkg.com/aframe-layout-component@5.x.x/dist/aframe-layout-component.min.js"></script>
@@ -23,13 +24,13 @@
     <a-scene cursor="rayOrigin: mouse" raycaster="objects: .clickable">
       <a-sky id="sky" rotation="0 0 0" crossorigin="anonymous"></a-sky>
       <a-assets>
-        <img id="portIcon" src="./assets/icon/port-waypoint.webp" />
+        <img id="portIcon" src="./assets/icon/waypoin-sheet.png" />
         <img id="titleImg" src="./assets/Title.png" />
-        <img id="nextIcon" src="./assets/icon/next.PNG" />
-        <img id="prevIcon" src="./assets/icon/previous.PNG" />
+        <img id="nextIcon" src="./assets/icon/right-sheet.png" />
+        <img id="prevIcon" src="./assets/icon/left-sheet.png" />
         <img id="homeIcon" src="./assets/home.png" />
         <img id="exitIcon" src="./assets/exit.png" />
-        <img id="infoIcon" src="./assets/icon/info.PNG" />
+        <img id="infoIcon" src="./assets/icon/info-sheet.png" />
       </a-assets>
       <a-camera id="cam" position="0 1.6 0" wasd-controls-enabled="false">
         <!-- Popup -->
@@ -133,12 +134,17 @@
             event-set__mouseleave="scale: 1 1 1"
             position="-0.5 -0.7 0"
           >
-            <a-image
+            <a-entity
               class="clickable"
-              width="0.4"
-              height="0.4"
-              src="#prevIcon"
-            ></a-image>
+              geometry="primitive: plane; height: 0.4; width: 0.4;"
+              material="shader: flat; src: #prevIcon; transparent: true; side: double;"
+              spritesheet-animation="
+                rows: 2; 
+                columns: 10; 
+                lastFrameIndex: 15; 
+                frameDuration: 0.1; 
+                loop: true;"
+            ></a-entity>
           </a-entity>
 
           <a-entity
@@ -147,12 +153,17 @@
             event-set__mouseleave="scale: 1 1 1"
             position="0.5 -0.7 0"
           >
-            <a-image
+            <a-entity
               class="clickable"
-              width="0.4"
-              height="0.4"
-              src="#nextIcon"
-            ></a-image>
+              geometry="primitive: plane; height: 0.4; width: 0.4;"
+              material="shader: flat; src: #nextIcon; transparent: true; side: double;"
+              spritesheet-animation="
+                rows: 2; 
+                columns: 10; 
+                lastFrameIndex: 15; 
+                frameDuration: 0.1; 
+                loop: true;"
+            ></a-entity>
           </a-entity>
 
           <a-entity

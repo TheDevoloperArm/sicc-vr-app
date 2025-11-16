@@ -1,65 +1,75 @@
-AFRAME.registerComponent('frame-animation', {
-    schema: {
-        frames: { type: 'array', default: [] }, // Array of image asset IDs or URLs
-        frameDuration: { type: 'number', default: 100 }, // Duration for each frame in milliseconds
-        autoplay: { type: 'boolean', default: true },
-        loop: { type: 'boolean', default: true }
-    },
+/**
+	Plays a spritesheet-based animation.
+	Author: Lee Stemkoski
+*/
+AFRAME.registerComponent('spritesheet-animation', {
 
-    init: function () {
-        this.currentFrame = 0;
-        this.lastFrameTime = 0;
-        this.isPlaying = this.data.autoplay;
+	schema: 
+	{
+  		rows: {type: 'number', default: 1},
+  		columns: {type: 'number', default: 1},
 
-        // Set the initial image
-        this.setImage();
-    },
+  		// set these values to play a (consecutive) subset of frames from spritesheet
+		firstFrameIndex: {type: 'number', default: 0},
+		lastFrameIndex: {type: 'number', default: -1}, // index is inclusive
 
-    update: function () {
-        // If data changes, reset animation
-        this.currentFrame = 0;
-        this.lastFrameTime = 0;
-        this.setImage();
-    },
+		// goes from top-left to bottom-right.
+		frameDuration: {type: 'number', default: 1}, // seconds to display each frame
+  		loop: {type: 'boolean', default: true},
+	},
 
-    tick: function (time, deltaTime) {
-        if (!this.isPlaying || this.data.frames.length === 0) {
-            return;
-        }
+	init: function()
+	{
+		this.repeatX = 1 / this.data.columns;
+		this.repeatY = 1 / this.data.rows;
 
-        if (time - this.lastFrameTime > this.data.frameDuration) {
-            this.currentFrame++;
-            if (this.currentFrame >= this.data.frames.length) {
-                if (this.data.loop) {
-                    this.currentFrame = 0;
-                } else {
-                    this.isPlaying = false; // Stop animation if not looping
-                    return;
-                }
-            }
-            this.setImage();
-            this.lastFrameTime = time;
-        }
-    },
+		if (this.data.lastFrameIndex == -1) // indicates value not set; default to full sheet
+			this.data.lastFrameIndex = this.data.columns * this.data.rows - 1;
 
-    play: function () {
-        this.isPlaying = true;
-    },
+		this.mesh = this.el.getObject3D("mesh");
 
-    pause: function () {
-        this.isPlaying = false;
-    },
+		this.frameTimer = 0;
+		this.currentFrameIndex = this.data.firstFrameIndex;
+		this.animationFinished = false;
+	},
+	
+	tick: function (time, timeDelta) 
+	{
+		// return if animation finished.
+		if (this.animationFinished)
+			return;
 
-    stop: function () {
-        this.isPlaying = false;
-        this.currentFrame = 0;
-        this.setImage();
-    },
+		this.frameTimer += timeDelta / 1000;
 
-    setImage: function () {
-        const frameSrc = this.data.frames[this.currentFrame];
-        if (frameSrc) {
-            this.el.setAttribute('src', frameSrc);
-        }
-    }
+		while (this.frameTimer > this.data.frameDuration)
+		{
+			this.currentFrameIndex += 1;
+			this.frameTimer -= this.data.frameDuration;
+
+			if (this.currentFrameIndex > this.data.lastFrameIndex)
+			{
+				if (this.data.loop)
+				{
+					this.currentFrameIndex = this.data.firstFrameIndex;
+				}
+				else
+				{
+					this.animationFinished = true;
+					return;
+				}
+			}
+		}
+
+		let rowNumber = Math.floor(this.currentFrameIndex / this.data.columns);
+		let columnNumber = this.currentFrameIndex % this.data.columns;
+		
+		let offsetY = (this.data.rows - rowNumber - 1) / this.data.rows;
+		let offsetX = columnNumber / this.data.columns;
+
+		if ( this.mesh.material.map )
+		{
+			this.mesh.material.map.repeat.set(this.repeatX, this.repeatY);
+			this.mesh.material.map.offset.set(offsetX, offsetY);
+		}
+	}
 });

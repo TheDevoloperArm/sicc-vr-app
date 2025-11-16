@@ -182,12 +182,39 @@ function createHotspots(hotspots) {
       "position",
       `${h.position.x} ${h.position.y} ${h.position.z}`
     );
-
-    const icon = document.createElement("a-image");
+    const icon = document.createElement("a-entity");
     icon.setAttribute("class", "clickable");
-    icon.setAttribute("src", h.icon);
-    icon.setAttribute("width", 0.3);
-    icon.setAttribute("height", 0.3);
+    icon.setAttribute("geometry", "primitive: plane; height: 0.3; width: 0.3;");
+
+    // 1. กำหนด Material และ src (ภาพ Sprite Sheet)
+    // Component นี้จะเข้ามาควบคุม map นี้
+    icon.setAttribute(
+      "material",
+      `shader: flat; 
+         src: ${h.icon}; 
+         transparent: true; 
+         side: double;`
+    );
+
+    // 2. ใช้งาน 'spritesheet-animation' (Component ที่คุณส่งมา)
+    // **ข้อควรระวัง: 'frameDuration' ใน Component นี้ใช้หน่วยเป็น "วินาที" (Seconds)**
+    icon.setAttribute(
+      "spritesheet-animation",
+      `rows: 2; 
+         columns: 10; 
+         lastFrameIndex: 14; 
+         frameDuration: 0.1; 
+         loop: true;`
+      // 0.1 วินาที = 100 มิลลิวินาที (10 เฟรมต่อวินาที)
+      // lastFrameIndex: 18 (คือเฟรมที่ 0 ถึง 18 = ทั้งหมด 19 เฟรม)
+    );
+
+    // const icon = document.createElement("a-image");
+    // icon.setAttribute("class", "clickable");
+    // icon.setAttribute("src", h.icon);
+    // icon.setAttribute("width", 0.3);
+    // icon.setAttribute("height", 0.3);
+
     icon.setAttribute("face-camera", "");
     icon.setAttribute("event-set__mouseenter", "scale: 1.2 1.2 1");
     icon.setAttribute("event-set__mouseleave", "scale: 1 1 1");

@@ -5,9 +5,8 @@ AFRAME.registerComponent("face-camera", {
       this.el.object3D.lookAt(cam.object3D.position);
       this.el.object3D.rotation.y += Math.PI; // แก้กรณีหันหลังให้กล้อง
     }
-  }
+  },
 });
-
 
 // waypoint.js
 function createWaypoints(waypoints) {
@@ -25,16 +24,39 @@ function createWaypoints(waypoints) {
     waypointEl.setAttribute("class", "waypoint");
     waypointEl.setAttribute("position", `${wp.x} ${wp.y} ${wp.z}`);
 
-    // ไอคอน
-    const iconEl = document.createElement("a-image");
-    iconEl.setAttribute("src", "#portIcon");
-    iconEl.setAttribute("width", 0.4);
-    iconEl.setAttribute("height", 0.4);
-    // iconEl.setAttribute("look-at", "#cam");
+    const iconEl = document.createElement("a-entity");
     iconEl.setAttribute("class", "clickable");
+    iconEl.setAttribute(
+      "geometry",
+      "primitive: plane; height: 0.5; width: 0.5;"
+    );
+
+    iconEl.setAttribute(
+      "material",
+      `shader: flat;
+        src: #portIcon;
+        transparent: true;
+        side: double;`
+    );
+
+    iconEl.setAttribute(
+      "spritesheet-animation",
+      `rows: 2;
+        columns: 10;
+        lastFrameIndex: 15;
+        frameDuration: 0.1;
+        loop: true;`
+    );
+
+    // ไอคอน
+    // const iconEl = document.createElement("a-image");
+    // iconEl.setAttribute("src", "#portIcon");
+    // iconEl.setAttribute("width", 0.4);
+    // iconEl.setAttribute("height", 0.4);
+    // iconEl.setAttribute("look-at", "#cam");
+    iconEl.setAttribute("face-camera", "");
     iconEl.setAttribute("event-set__mouseenter", "scale: 1.2 1.2 1");
     iconEl.setAttribute("event-set__mouseleave", "scale: 1 1 1");
-    iconEl.setAttribute("face-camera", "");
 
     // ป้ายชื่อ
     const labelEl = document.createElement("a-entity");
@@ -44,7 +66,7 @@ function createWaypoints(waypoints) {
        outlineWidth: 0.003;
        outlineColor: #4F200D;`
     );
-    labelEl.setAttribute("position", "0 -0.3 0");
+    labelEl.setAttribute("position", "0 0.2 0");
     labelEl.setAttribute("face-camera", "");
 
     waypointEl.appendChild(iconEl);
